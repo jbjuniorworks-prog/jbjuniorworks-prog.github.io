@@ -1,0 +1,848 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Portfólio · José Batista — Full-stack Dev</title>
+  <meta name="description" content="Portfólio de José Batista, desenvolvedor full-stack (Python + TypeScript). Plataforma SaaS de licenciamento ambiental e marketplace local com entrega em tempo real.">
+  <meta name="author" content="José Batista">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#1b6b4a">
+  <link rel="canonical" href="https://jbjuniorworks-prog.github.io/">
+  <!-- Open Graph / preview ao compartilhar o link -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="José Batista — Full-stack Dev">
+  <meta property="og:title" content="José Batista — Desenvolvedor Full-stack">
+  <meta property="og:description" content="Full-stack (Python + TypeScript): plataforma SaaS de licenciamento ambiental e marketplace local com entrega em tempo real.">
+  <meta property="og:url" content="https://jbjuniorworks-prog.github.io/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="José Batista — Desenvolvedor Full-stack">
+  <meta name="twitter:description" content="Full-stack (Python + TypeScript): plataforma SaaS de licenciamento ambiental e marketplace local com entrega em tempo real.">
+  <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">🌲</text></svg>'>
+<style>
+  :root {
+    --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-mono: ui-monospace, "Cascadia Code", "SF Mono", "Segoe UI Mono", "Roboto Mono", Consolas, "Liberation Mono", monospace;
+
+    --paper: #edf1ec;
+    --surface: #f7f9f5;
+    --surface-2: #e5eae1;
+    --ink: #12211b;
+    --ink-soft: #4a584f;
+    --ink-faint: #75847a;
+    --line: #cad5c8;
+    --line-soft: #dbe3d8;
+    --pine: #1b6b4a;
+    --pine-deep: #124d35;
+    --moss-wash: #dbe8de;
+    --signal: #a94e1c;
+    --signal-wash: #efe0d3;
+
+    --crit: #b23a2e;
+    --crit-wash: #f0dcd8;
+    --grave: #9e6a12;
+    --grave-wash: #efe4cf;
+    --med: #4f6577;
+    --med-wash: #dde5ea;
+
+    --maxw: 1120px;
+    --radius: 14px;
+    --shadow: 0 1px 2px rgba(18,33,27,.05), 0 8px 30px -18px rgba(18,33,27,.22);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #0b1512;
+      --surface: #12201a;
+      --surface-2: #182a21;
+      --ink: #e3ebe3;
+      --ink-soft: #9bae9f;
+      --ink-faint: #6f8377;
+      --line: #26362d;
+      --line-soft: #1e2c25;
+      --pine: #49b380;
+      --pine-deep: #2f9061;
+      --moss-wash: #16281f;
+      --signal: #e08a54;
+      --signal-wash: #26190f;
+
+      --crit: #e5705f;
+      --crit-wash: #291714;
+      --grave: #dfa63c;
+      --grave-wash: #241c0f;
+      --med: #8fa5b5;
+      --med-wash: #131f27;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 12px 40px -20px rgba(0,0,0,.7);
+    }
+  }
+  :root[data-theme="light"] {
+    --paper: #edf1ec; --surface: #f7f9f5; --surface-2: #e5eae1;
+    --ink: #12211b; --ink-soft: #4a584f; --ink-faint: #75847a;
+    --line: #cad5c8; --line-soft: #dbe3d8;
+    --pine: #1b6b4a; --pine-deep: #124d35; --moss-wash: #dbe8de;
+    --signal: #a94e1c; --signal-wash: #efe0d3;
+    --crit: #b23a2e; --crit-wash: #f0dcd8; --grave: #9e6a12; --grave-wash: #efe4cf; --med: #4f6577; --med-wash: #dde5ea;
+    --shadow: 0 1px 2px rgba(18,33,27,.05), 0 8px 30px -18px rgba(18,33,27,.22);
+  }
+  :root[data-theme="dark"] {
+    --paper: #0b1512; --surface: #12201a; --surface-2: #182a21;
+    --ink: #e3ebe3; --ink-soft: #9bae9f; --ink-faint: #6f8377;
+    --line: #26362d; --line-soft: #1e2c25;
+    --pine: #49b380; --pine-deep: #2f9061; --moss-wash: #16281f;
+    --signal: #e08a54; --signal-wash: #26190f;
+    --crit: #e5705f; --crit-wash: #291714; --grave: #dfa63c; --grave-wash: #241c0f; --med: #8fa5b5; --med-wash: #131f27;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 12px 40px -20px rgba(0,0,0,.7);
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  .wrap { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+
+  a { color: inherit; }
+  ::selection { background: var(--pine); color: var(--paper); }
+
+  /* ---------- header ---------- */
+  .top {
+    position: sticky; top: 0; z-index: 50;
+    background: color-mix(in srgb, var(--paper) 82%, transparent);
+    backdrop-filter: saturate(140%) blur(10px);
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .top-in { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+  .brand { font-family: var(--font-mono); font-weight: 600; font-size: .9rem; letter-spacing: .02em; }
+  .brand b { color: var(--pine); }
+  .nav { display: flex; gap: 24px; }
+  .nav a {
+    font-family: var(--font-mono); font-size: .78rem; text-decoration: none;
+    color: var(--ink-soft); letter-spacing: .03em; padding: 4px 0; position: relative;
+  }
+  .nav a::after {
+    content: ""; position: absolute; left: 0; right: 100%; bottom: -2px; height: 1.5px;
+    background: var(--pine); transition: right .25s ease;
+  }
+  .nav a:hover { color: var(--ink); }
+  .nav a:hover::after { right: 0; }
+  @media (max-width: 760px) { .nav { display: none; } }
+
+  /* ---------- eyebrow / section headings ---------- */
+  .eyebrow {
+    font-family: var(--font-mono); font-size: .74rem; letter-spacing: .18em;
+    text-transform: uppercase; color: var(--pine);
+    display: inline-flex; align-items: center; gap: 9px; margin: 0 0 18px;
+  }
+  .eyebrow::before { content: ""; width: 22px; height: 1.5px; background: var(--pine); display: inline-block; }
+
+  section { padding: 84px 0; border-top: 1px solid var(--line-soft); }
+  section:first-of-type { border-top: none; }
+  h2.sec {
+    font-size: clamp(1.6rem, 3.6vw, 2.35rem); line-height: 1.08; margin: 0 0 14px;
+    letter-spacing: -.02em; font-weight: 780; text-wrap: balance; max-width: 22ch;
+  }
+  .sec-lead { color: var(--ink-soft); max-width: 62ch; font-size: 1.06rem; margin: 0; }
+  .subhead { font-family: var(--font-mono); font-size: .74rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint); margin: 56px 0 4px; display: flex; align-items: center; gap: 10px; }
+  .subhead::before { content: ""; width: 16px; height: 1.5px; background: var(--ink-faint); }
+
+  /* ---------- hero ---------- */
+  .hero { position: relative; padding: 96px 0 88px; border-top: none; overflow: hidden; }
+  .hero::before {
+    content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+    background-image:
+      linear-gradient(var(--line-soft) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line-soft) 1px, transparent 1px);
+    background-size: 46px 46px; background-position: -1px -1px;
+    -webkit-mask-image: radial-gradient(120% 90% at 78% 8%, #000 0%, transparent 62%);
+    mask-image: radial-gradient(120% 90% at 78% 8%, #000 0%, transparent 62%);
+    opacity: .8;
+  }
+  .hero .wrap { position: relative; z-index: 1; }
+  .hero-tag {
+    font-family: var(--font-mono); font-size: .78rem; color: var(--ink-soft);
+    letter-spacing: .06em; display: flex; align-items: center; gap: 10px; margin-bottom: 26px;
+  }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--pine); box-shadow: 0 0 0 4px var(--moss-wash); }
+  h1 {
+    font-size: clamp(2.5rem, 7vw, 4.6rem); line-height: 1.02; letter-spacing: -.035em;
+    font-weight: 800; margin: 0 0 22px; max-width: 16ch; text-wrap: balance;
+  }
+  h1 .accent { color: var(--pine); }
+  .hero-sub { font-size: clamp(1.05rem, 2.2vw, 1.24rem); color: var(--ink-soft); max-width: 60ch; margin: 0 0 36px; }
+  .hero-sub b { color: var(--ink); font-weight: 600; }
+
+  .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 54px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 9px; font-family: var(--font-mono);
+    font-size: .84rem; letter-spacing: .02em; text-decoration: none; padding: 11px 18px;
+    border-radius: 9px; border: 1px solid var(--line); background: var(--surface); color: var(--ink);
+    transition: transform .18s ease, border-color .18s ease, background .18s ease;
+  }
+  .btn:hover { transform: translateY(-2px); border-color: var(--pine); }
+  .btn.primary { background: var(--pine); border-color: var(--pine); color: #f5faf6; }
+  .btn.primary:hover { background: var(--pine-deep); border-color: var(--pine-deep); }
+  .btn svg { width: 15px; height: 15px; }
+  button.btn { cursor: pointer; -webkit-appearance: none; appearance: none; }
+  .copy-email .ic-check { display: none; }
+  .copy-email.copied .ic-mail { display: none; }
+  .copy-email.copied .ic-check { display: inline-block; }
+  .btn.copy-email.copied:not(.primary) { border-color: var(--pine); color: var(--pine); }
+
+  .metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line-soft); border: 1px solid var(--line-soft); border-radius: var(--radius); overflow: hidden; }
+  .metric { background: var(--surface); padding: 22px 20px; }
+  .metric .n { font-size: clamp(1.4rem, 3.4vw, 2rem); font-weight: 780; letter-spacing: -.02em; font-variant-numeric: tabular-nums; line-height: 1; }
+  .metric .n .u { color: var(--pine); }
+  .metric .l { font-family: var(--font-mono); font-size: .72rem; color: var(--ink-soft); margin-top: 10px; line-height: 1.4; letter-spacing: .01em; }
+  @media (max-width: 720px) { .metrics { grid-template-columns: repeat(2, 1fr); } }
+
+  /* ---------- project intro ---------- */
+  .prj-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 30px; margin-top: 40px; align-items: start; }
+  @media (max-width: 860px) { .prj-grid { grid-template-columns: 1fr; } }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; box-shadow: var(--shadow); }
+  .card p { color: var(--ink-soft); }
+  .kv { display: grid; grid-template-columns: auto 1fr; gap: 10px 18px; font-size: .92rem; margin: 0; }
+  .kv dt { font-family: var(--font-mono); font-size: .74rem; letter-spacing: .04em; color: var(--ink-faint); text-transform: uppercase; padding-top: 3px; }
+  .kv dd { margin: 0; color: var(--ink); }
+  .tagset { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 4px; }
+  .chip { font-family: var(--font-mono); font-size: .72rem; padding: 4px 9px; border-radius: 6px; background: var(--moss-wash); color: var(--pine-deep); border: 1px solid color-mix(in srgb, var(--pine) 22%, transparent); }
+
+  /* ---------- mockups (shared) ---------- */
+  .figure { margin-top: 42px; }
+  .fig-cap { font-family: var(--font-mono); font-size: .72rem; color: var(--ink-faint); letter-spacing: .02em; margin: 16px 0 0; text-align: center; }
+  .pill { font-family: var(--font-mono); font-size: .68rem; padding: 3px 10px; border-radius: 20px; border: 1px solid var(--line); white-space: nowrap; }
+  .pill.ok { background: var(--moss-wash); color: var(--pine); border-color: color-mix(in srgb, var(--pine) 34%, transparent); }
+  .pill.warn { background: var(--grave-wash); color: var(--grave); border-color: color-mix(in srgb, var(--grave) 42%, var(--line)); }
+  .pill.info { background: var(--med-wash); color: var(--med); border-color: color-mix(in srgb, var(--med) 42%, var(--line)); }
+  .pill.mute { background: var(--surface-2); color: var(--ink-faint); }
+
+  /* browser frame — licensing dashboard */
+  .browser { border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: var(--surface); box-shadow: var(--shadow); }
+  .bw-bar { display: flex; align-items: center; gap: 14px; padding: 12px 16px; background: var(--surface-2); border-bottom: 1px solid var(--line-soft); }
+  .bw-dots { display: flex; gap: 7px; flex: 0 0 auto; }
+  .bw-dots i { width: 11px; height: 11px; border-radius: 50%; background: var(--line); display: block; }
+  .bw-url { font-family: var(--font-mono); font-size: .72rem; color: var(--ink-faint); background: var(--surface); border: 1px solid var(--line-soft); border-radius: 7px; padding: 5px 12px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 340px; }
+  .bw-body { display: grid; grid-template-columns: 168px 1fr; }
+  .bw-side { border-right: 1px solid var(--line-soft); padding: 20px 16px; display: flex; flex-direction: column; gap: 13px; background: color-mix(in srgb, var(--surface-2) 42%, var(--surface)); }
+  .bw-side .s-item { height: 9px; border-radius: 5px; background: var(--line-soft); }
+  .bw-side .s-item.w1 { width: 78%; } .bw-side .s-item.w2 { width: 62%; } .bw-side .s-item.w3 { width: 70%; }
+  .bw-side .s-item.on { background: color-mix(in srgb, var(--pine) 60%, var(--line)); width: 88%; }
+  .bw-main { padding: 22px 24px; min-width: 0; }
+  .bw-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+  .bw-head h4 { margin: 0; font-size: 1rem; letter-spacing: -.01em; }
+  .bw-head .cta { font-family: var(--font-mono); font-size: .68rem; color: #f5faf6; background: var(--pine); border-radius: 7px; padding: 5px 11px; }
+  .tbl { display: flex; flex-direction: column; }
+  .tr { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 13px 2px; border-top: 1px solid var(--line-soft); }
+  .tr.th { border-top: none; font-family: var(--font-mono); font-size: .66rem; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-faint); padding-bottom: 6px; }
+  .tc-name b { display: block; font-size: .92rem; font-weight: 640; }
+  .tc-name span { font-family: var(--font-mono); font-size: .68rem; color: var(--ink-faint); }
+  @media (max-width: 560px) { .bw-body { grid-template-columns: 1fr; } .bw-side { display: none; } }
+
+  /* phone frames — marketplace */
+  .mock-row { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+  .phone { width: 208px; flex: 0 0 auto; border-radius: 34px; padding: 9px; background: #0c1611; box-shadow: 0 22px 54px -26px rgba(0,0,0,.55), inset 0 0 0 1px rgba(255,255,255,.06); }
+  .scr { position: relative; height: 428px; border-radius: 26px; overflow: hidden; background: var(--surface); display: flex; flex-direction: column; }
+  .notch { position: absolute; top: 9px; left: 50%; transform: translateX(-50%); width: 62px; height: 6px; border-radius: 6px; background: rgba(0,0,0,.32); z-index: 4; }
+  :root[data-theme="dark"] .notch { background: rgba(255,255,255,.2); }
+
+  .p-pad { padding: 30px 13px 13px; display: flex; flex-direction: column; gap: 12px; }
+  .p-search { background: var(--surface-2); border: 1px solid var(--line-soft); border-radius: 20px; padding: 9px 14px; font-size: .72rem; color: var(--ink-faint); }
+  .p-chips { display: flex; gap: 6px; }
+  .p-chips span { font-size: .64rem; font-family: var(--font-mono); padding: 4px 9px; border-radius: 14px; background: var(--surface-2); color: var(--ink-soft); border: 1px solid var(--line-soft); }
+  .p-chips span.on { background: var(--pine); color: #f5faf6; border-color: var(--pine); }
+  .p-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .p-card { border: 1px solid var(--line-soft); border-radius: 12px; overflow: hidden; background: var(--surface); }
+  .p-img { height: 62px; background: linear-gradient(135deg, var(--moss-wash), color-mix(in srgb, var(--pine) 32%, var(--surface))); }
+  .p-img.alt { background: linear-gradient(135deg, var(--signal-wash), color-mix(in srgb, var(--signal) 30%, var(--surface))); }
+  .p-card b { display: block; font-size: .72rem; padding: 8px 9px 0; font-weight: 620; }
+  .p-price { display: flex; align-items: center; justify-content: space-between; padding: 5px 9px 9px; font-size: .74rem; font-weight: 760; color: var(--pine); }
+  .p-price i { width: 21px; height: 21px; border-radius: 50%; background: var(--pine); color: #f5faf6; font-style: normal; display: grid; place-items: center; font-size: .82rem; line-height: 1; }
+
+  .p-map { flex: 1; position: relative; margin-top: 22px;
+    background-image: linear-gradient(var(--line-soft) 1px, transparent 1px), linear-gradient(90deg, var(--line-soft) 1px, transparent 1px);
+    background-size: 22px 22px; background-color: color-mix(in srgb, var(--surface-2) 55%, var(--surface)); }
+  .p-map svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .p-sheet { padding: 13px 14px 15px; border-top: 1px solid var(--line-soft); background: var(--surface); display: flex; flex-direction: column; gap: 9px; }
+  .p-sheet-row { display: flex; align-items: center; justify-content: space-between; }
+  .p-sheet-row b { font-size: .88rem; }
+  .p-bar { height: 6px; border-radius: 6px; background: var(--surface-2); overflow: hidden; }
+  .p-bar i { display: block; height: 100%; background: var(--pine); border-radius: 6px; }
+  .p-eta { font-family: var(--font-mono); font-size: .64rem; color: var(--ink-faint); }
+
+  .p-chat { flex: 1; padding: 30px 12px 12px; display: flex; flex-direction: column; gap: 8px; }
+  .msg { max-width: 84%; font-size: .74rem; padding: 8px 11px; border-radius: 14px; line-height: 1.35; }
+  .msg.in { align-self: flex-start; background: var(--surface-2); border: 1px solid var(--line-soft); border-bottom-left-radius: 5px; color: var(--ink); }
+  .msg.out { align-self: flex-end; background: var(--pine); color: #f5faf6; border-bottom-right-radius: 5px; }
+  .msg.mcard { align-self: flex-start; display: flex; gap: 9px; align-items: center; background: var(--surface); border: 1px solid var(--line); padding: 8px; max-width: 90%; }
+  .mc-img { width: 34px; height: 34px; border-radius: 8px; background: linear-gradient(135deg, var(--moss-wash), color-mix(in srgb, var(--pine) 32%, var(--surface))); flex: 0 0 auto; }
+  .msg.mcard b { font-size: .74rem; display: block; }
+  .msg.mcard span { font-family: var(--font-mono); font-size: .64rem; color: var(--ink-faint); }
+  .msg.typing { display: flex; gap: 4px; align-self: flex-start; }
+  .msg.typing i { width: 6px; height: 6px; border-radius: 50%; background: var(--ink-faint); display: block; animation: blink 1.2s infinite; }
+  .msg.typing i:nth-child(2) { animation-delay: .2s; }
+  .msg.typing i:nth-child(3) { animation-delay: .4s; }
+  @keyframes blink { 0%, 60%, 100% { opacity: .25; } 30% { opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) { .msg.typing i { animation: none; } }
+  .p-input { display: flex; align-items: center; gap: 8px; padding: 10px 12px; border-top: 1px solid var(--line-soft); background: var(--surface); }
+  .p-input span { flex: 1; font-size: .72rem; color: var(--ink-faint); background: var(--surface-2); border: 1px solid var(--line-soft); border-radius: 16px; padding: 7px 12px; }
+  .p-input .send { width: 28px; height: 28px; border-radius: 50%; background: var(--pine); color: #f5faf6; display: grid; place-items: center; font-style: normal; font-size: .78rem; flex: 0 0 auto; }
+
+  /* ---------- architecture diagram ---------- */
+  .arch-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; margin-top: 20px; align-items: center; }
+  @media (max-width: 860px) { .arch-wrap { grid-template-columns: 1fr; } }
+  .arch {
+    background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 26px; box-shadow: var(--shadow); position: relative;
+  }
+  .layer { border: 1.5px solid var(--line); border-radius: 12px; padding: 20px; position: relative; transition: border-color .22s ease, background .22s ease; }
+  .layer-label { position: absolute; top: -10px; left: 16px; background: var(--surface); padding: 0 8px; font-family: var(--font-mono); font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); }
+  .layer-p { background: color-mix(in srgb, var(--med-wash) 45%, var(--surface)); }
+  .layer-d { margin-top: 20px; background: color-mix(in srgb, var(--surface-2) 60%, var(--surface)); }
+  .layer-core { margin-top: 20px; background: var(--moss-wash); border-color: color-mix(in srgb, var(--pine) 45%, transparent); text-align: center; }
+  .layer:hover { border-color: var(--pine); }
+  .layer-core .core-t { font-weight: 720; font-size: 1.05rem; }
+  .layer-desc { font-family: var(--font-mono); font-size: .76rem; color: var(--ink-soft); margin: 4px 0 0; }
+  .layer-core .layer-label { background: var(--moss-wash); color: var(--pine-deep); }
+  .core-note { font-family: var(--font-mono); font-size: .7rem; color: var(--pine-deep); margin-top: 8px; letter-spacing: .02em; }
+  :root[data-theme="dark"] .core-note { color: var(--pine); }
+
+  .arch-legend h3 { font-size: 1.15rem; margin: 0 0 8px; letter-spacing: -.01em; }
+  .arch-legend > p { color: var(--ink-soft); margin: 0 0 22px; }
+  .lg-item { display: flex; gap: 14px; padding: 14px 0; border-top: 1px dashed var(--line); }
+  .lg-item:first-of-type { border-top: none; }
+  .lg-k { font-family: var(--font-mono); font-size: .74rem; color: var(--pine); flex: 0 0 96px; padding-top: 2px; letter-spacing: .02em; }
+  .lg-v { margin: 0; font-size: .92rem; color: var(--ink); }
+  .lg-v span { color: var(--ink-soft); }
+
+  /* audit callout */
+  .audit { margin-top: 42px; border: 1px solid var(--signal); border-radius: var(--radius); background: linear-gradient(180deg, var(--signal-wash), transparent 140%); padding: 28px; box-shadow: var(--shadow); }
+  .audit .eyebrow { color: var(--signal); }
+  .audit .eyebrow::before { background: var(--signal); }
+  .audit h3 { margin: 0 0 10px; font-size: 1.3rem; letter-spacing: -.015em; }
+  .audit p { color: var(--ink-soft); max-width: 66ch; margin: 0 0 20px; }
+  .sev-row { display: flex; flex-wrap: wrap; gap: 10px; }
+  .sev { display: flex; align-items: baseline; gap: 9px; padding: 10px 14px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); }
+  .sev .c { font-size: 1.35rem; font-weight: 780; font-variant-numeric: tabular-nums; line-height: 1; }
+  .sev .t { font-family: var(--font-mono); font-size: .72rem; letter-spacing: .02em; color: var(--ink-soft); }
+  .sev.crit { border-color: var(--crit); background: var(--crit-wash); } .sev.crit .c { color: var(--crit); }
+  .sev.grave { border-color: color-mix(in srgb, var(--grave) 60%, var(--line)); background: var(--grave-wash); } .sev.grave .c { color: var(--grave); }
+  .sev.med { border-color: color-mix(in srgb, var(--med) 45%, var(--line)); background: var(--med-wash); } .sev.med .c { color: var(--med); }
+
+  /* ---------- how it was made grid ---------- */
+  .howto { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 24px; }
+  @media (max-width: 640px) { .howto { grid-template-columns: 1fr; } }
+  .howto .h { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 20px 22px; transition: border-color .18s ease; }
+  .howto .h:hover { border-color: var(--pine); }
+  .howto .k { font-family: var(--font-mono); font-size: .7rem; color: var(--pine); letter-spacing: .04em; }
+  .howto .h h4 { margin: 8px 0 6px; font-size: 1rem; letter-spacing: -.01em; }
+  .howto .h p { margin: 0; color: var(--ink-soft); font-size: .92rem; }
+
+  /* ---------- stack ---------- */
+  .stack-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 40px; }
+  @media (max-width: 860px) { .stack-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .stack-grid { grid-template-columns: 1fr; } }
+  .st { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; transition: transform .18s ease, border-color .18s ease; }
+  .st:hover { transform: translateY(-3px); border-color: var(--pine); }
+  .st h3 { font-family: var(--font-mono); font-size: .78rem; letter-spacing: .06em; text-transform: uppercase; color: var(--pine); margin: 0 0 14px; display: flex; align-items: center; gap: 9px; }
+  .st h3 .idx { color: var(--ink-faint); }
+  .st ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 7px; }
+  .st li { font-size: .85rem; padding: 5px 10px; border-radius: 7px; background: var(--surface-2); color: var(--ink); border: 1px solid var(--line-soft); }
+
+  /* ---------- process ---------- */
+  .proc-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--line-soft); border: 1px solid var(--line-soft); border-radius: var(--radius); overflow: hidden; margin-top: 40px; }
+  @media (max-width: 720px) { .proc-grid { grid-template-columns: 1fr; } }
+  .proc { background: var(--surface); padding: 26px; }
+  .proc .no { font-family: var(--font-mono); font-size: .74rem; color: var(--pine); letter-spacing: .06em; }
+  .proc h3 { margin: 8px 0 8px; font-size: 1.08rem; letter-spacing: -.01em; }
+  .proc p { margin: 0; color: var(--ink-soft); font-size: .95rem; }
+
+  /* ---------- contact ---------- */
+  .contact h2.sec { max-width: 24ch; }
+  .contact-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+
+  footer { border-top: 1px solid var(--line-soft); padding: 30px 0 46px; }
+  .foot-in { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-family: var(--font-mono); font-size: .74rem; color: var(--ink-faint); }
+
+  /* reveal */
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s cubic-bezier(.2,.6,.2,1), transform .7s cubic-bezier(.2,.6,.2,1); }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+
+  :focus-visible { outline: 2px solid var(--pine); outline-offset: 3px; border-radius: 4px; }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top-in">
+    <span class="brand">jose<b>.batista</b></span>
+    <nav class="nav">
+      <a href="#licenciamento">licenciamento</a>
+      <a href="#marketplace">marketplace</a>
+      <a href="#stack">stack</a>
+      <a href="#processo">processo</a>
+      <a href="#contato">contato</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <p class="hero-tag"><span class="dot"></span> Desenvolvedor Full-stack · Python + TypeScript</p>
+      <h1>Construo software <span class="accent">de ponta a ponta</span> — do domínio ao deploy.</h1>
+      <p class="hero-sub">
+        Foco em <b>arquitetura limpa</b>, APIs bem desenhadas e interfaces que as pessoas realmente usam.
+        Dois produtos recentes: uma <b>plataforma SaaS de licenciamento ambiental</b> para prefeituras —
+        com IA em produção e uma auditoria de segurança do repositório inteiro — e um
+        <b>marketplace local em React Native</b>, com três apps mobile, entrega em tempo real e
+        assistente de compras com IA.
+      </p>
+      <div class="cta-row">
+        <a class="btn primary" href="#licenciamento">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          Ver os projetos
+        </a>
+        <button type="button" class="btn copy-email" data-email="jb.juniorworks@gmail.com" title="Copiar e-mail" aria-label="Copiar e-mail jb.juniorworks@gmail.com">
+          <svg class="ic-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          <svg class="ic-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+          <span class="lbl">jb.juniorworks@gmail.com</span>
+        </button>
+      </div>
+      <div class="metrics reveal">
+        <div class="metric"><div class="n">2</div><div class="l">plataformas full-stack<br>(web + mobile)</div></div>
+        <div class="metric"><div class="n">3</div><div class="l">apps mobile em<br>um monorepo</div></div>
+        <div class="metric"><div class="n">17</div><div class="l">achados em auditoria<br>(1 crítico de segurança)</div></div>
+        <div class="metric"><div class="n">gpt-4o</div><div class="l">IA real em produção<br>(Railway)</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJETO 1 · LICENCIAMENTO -->
+  <section id="licenciamento">
+    <div class="wrap">
+      <p class="eyebrow">Projeto · govtech SaaS</p>
+      <h2 class="sec">Plataforma de licenciamento ambiental por município</h2>
+      <p class="sec-lead">
+        SaaS multitenant onde prefeituras configuram tipos de licença, empreendedores abrem e acompanham
+        pedidos por um portal, e a IA apoia a análise. Sou dono de uma fatia vertical de funcionalidades —
+        do banco à tela — num time que faz merge contínuo na main.
+      </p>
+
+      <div class="prj-grid">
+        <div class="card reveal">
+          <p style="margin-top:0">
+            O sistema tem três públicos — o <b>painel interno da prefeitura</b>, a <b>operadora da plataforma</b>
+            (que confere e libera) e o <b>portal público do empreendedor</b> — e cada recurso é escopado por
+            cidade, sem vazar dados entre municípios. Entreguei desde a modelagem do núcleo de licenciamento
+            até o treinamento de IA de verdade, sempre no mesmo padrão: <b>slice vertical</b>
+            (domínio → dados → apresentação), migrations escritas à mão e verificação rodando de verdade
+            antes de subir.
+          </p>
+        </div>
+        <div class="card reveal">
+          <dl class="kv">
+            <dt>Papel</dt><dd>Full-stack · dono de módulos</dd>
+            <dt>Domínio</dt><dd>Licenciamento ambiental (govtech)</dd>
+            <dt>Padrão</dt><dd>Clean Architecture · BFF · multitenancy</dd>
+            <dt>Deploy</dt><dd>Railway · CI no GitHub Actions</dd>
+            <dt>Stack</dt>
+            <dd><div class="tagset">
+              <span class="chip">FastAPI</span><span class="chip">Next.js 16</span>
+              <span class="chip">React 19</span><span class="chip">Postgres</span>
+              <span class="chip">Redis</span><span class="chip">OpenAI</span>
+            </div></dd>
+          </dl>
+        </div>
+      </div>
+
+      <!-- product visual: browser dashboard mockup -->
+      <div class="figure reveal">
+        <div class="browser">
+          <div class="bw-bar">
+            <div class="bw-dots"><i></i><i></i><i></i></div>
+            <div class="bw-url">app · painel da operadora / tipos-de-licenca</div>
+          </div>
+          <div class="bw-body">
+            <aside class="bw-side">
+              <div class="s-item on"></div>
+              <div class="s-item w1"></div>
+              <div class="s-item w3"></div>
+              <div class="s-item w2"></div>
+              <div class="s-item w1"></div>
+              <div class="s-item w3"></div>
+            </aside>
+            <div class="bw-main">
+              <div class="bw-head">
+                <h4>Tipos de licença</h4>
+                <span class="cta">+ novo tipo</span>
+              </div>
+              <div class="tbl">
+                <div class="tr th"><span>Tipo &amp; grupo</span><span>Status</span></div>
+                <div class="tr">
+                  <div class="tc-name"><b>Licença Prévia</b><span>Indústria · v3</span></div>
+                  <span class="pill ok">no ar</span>
+                </div>
+                <div class="tr">
+                  <div class="tc-name"><b>Licença de Instalação</b><span>Indústria · v1</span></div>
+                  <span class="pill info">treinando IA</span>
+                </div>
+                <div class="tr">
+                  <div class="tc-name"><b>Licença de Operação</b><span>Comércio · v2</span></div>
+                  <span class="pill warn">em conferência</span>
+                </div>
+                <div class="tr">
+                  <div class="tc-name"><b>Autorização de Supressão</b><span>Rural · v1</span></div>
+                  <span class="pill ok">no ar</span>
+                </div>
+                <div class="tr">
+                  <div class="tc-name"><b>Dispensa de Licenciamento</b><span>rascunho</span></div>
+                  <span class="pill mute">não publicado</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="fig-cap">Mockup · configuração de tipos de licença com o gating de IA (treino → conferência → no ar)</p>
+      </div>
+
+      <!-- how it was made: architecture -->
+      <p class="subhead">Como foi feito · ports &amp; adapters</p>
+      <div class="arch-wrap">
+        <div class="arch reveal" aria-hidden="true">
+          <div class="layer layer-p">
+            <span class="layer-label">presentation</span>
+            <p class="layer-desc">routers FastAPI · schemas Pydantic · dependencies</p>
+            <div class="layer layer-d">
+              <span class="layer-label">data</span>
+              <p class="layer-desc">SQLModel · repositórios SQL · mappers · adapters (Redis, OpenAI, storage)</p>
+              <div class="layer layer-core">
+                <span class="layer-label">domain</span>
+                <div class="core-t">entidades · ports · use cases</div>
+                <div class="core-note">sem framework · sem SQL · sem HTTP</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="arch-legend reveal">
+          <h3>A regra no centro, a infra por fora</h3>
+          <p>O núcleo de domínio não conhece framework, SQL nem HTTP — o que deixa a decisão de negócio testável e o resto substituível.</p>
+          <div class="lg-item">
+            <span class="lg-k">domain</span>
+            <p class="lg-v">Dataclasses, interfaces de repositório e use cases. <span>É onde a decisão de negócio acontece — puro Python.</span></p>
+          </div>
+          <div class="lg-item">
+            <span class="lg-k">data</span>
+            <p class="lg-v">Implementações concretas das portas. <span>Troco o adapter (mock → SQL, stub → OpenAI real) sem tocar no domínio.</span></p>
+          </div>
+          <div class="lg-item">
+            <span class="lg-k">presentation</span>
+            <p class="lg-v">Rotas, schemas e o envelope de erro único em pt-BR. <span>Multitenancy e permissões (RBAC) aplicadas aqui.</span></p>
+          </div>
+          <div class="lg-item">
+            <span class="lg-k">web · bff</span>
+            <p class="lg-v">O Next.js é um <em>Backend-for-Frontend</em>: server actions injetam a sessão no servidor. <span>O navegador nunca fala com a API direto.</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- impact: security audit -->
+      <div class="audit reveal">
+        <p class="eyebrow">Impacto · qualidade &amp; segurança</p>
+        <h3>Auditoria do repositório inteiro</h3>
+        <p>
+          Varri o sistema todo (~43 mil linhas) com seis revisores em paralelo e corrigi <b>17 achados</b>
+          em 5 PRs — cada um verificado exercitando o caso real, não só compilando. Entre eles: um
+          <b>escalonamento de privilégio</b> em que um convidado conseguia virar super-admin da plataforma,
+          <b>vazamento de pedidos entre municípios</b> e um treino de IA disparado no tenant errado gastando
+          crédito alheio. Foi aqui que virei a lente de "features" para "onde isso quebra".
+        </p>
+        <div class="sev-row">
+          <div class="sev crit"><span class="c">1</span><span class="t">crítico<br>(segurança)</span></div>
+          <div class="sev grave"><span class="c">4</span><span class="t">graves</span></div>
+          <div class="sev med"><span class="c">12</span><span class="t">médios / menores</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJETO 2 · MARKETPLACE -->
+  <section id="marketplace">
+    <div class="wrap">
+      <p class="eyebrow">Projeto · mobile + tempo real</p>
+      <h2 class="sec">Marketplace local com entrega em tempo real</h2>
+      <p class="sec-lead">
+        Plataforma de comércio local que conecta consumidores, lojistas e entregadores: três apps mobile
+        independentes sobre um backend único, com rastreamento de entrega ao vivo e um assistente de compras
+        com IA.
+      </p>
+
+      <div class="metrics reveal" style="margin-top:40px">
+        <div class="metric"><div class="n">3</div><div class="l">apps mobile<br>consumidor · lojista · entregador</div></div>
+        <div class="metric"><div class="n">1</div><div class="l">monorepo — tipos, tema<br>e API compartilhados</div></div>
+        <div class="metric"><div class="n">live</div><div class="l">rastreamento de entrega<br>em tempo real</div></div>
+        <div class="metric"><div class="n">IA</div><div class="l">assistente de compras<br>com tool-calling</div></div>
+      </div>
+
+      <!-- product visual: three phone mockups -->
+      <div class="figure reveal">
+        <div class="mock-row">
+          <!-- vitrine -->
+          <div class="phone"><div class="scr">
+            <div class="notch"></div>
+            <div class="p-pad">
+              <div class="p-search">Buscar perto de você</div>
+              <div class="p-chips"><span class="on">Tudo</span><span>Mercado</span><span>Farmácia</span></div>
+              <div class="p-cards">
+                <div class="p-card"><div class="p-img"></div><b>Café torrado 500 g</b><div class="p-price">R$ 24,90 <i>+</i></div></div>
+                <div class="p-card"><div class="p-img alt"></div><b>Kit limpeza</b><div class="p-price">R$ 12,50 <i>+</i></div></div>
+                <div class="p-card"><div class="p-img alt"></div><b>Pão artesanal</b><div class="p-price">R$ 9,00 <i>+</i></div></div>
+                <div class="p-card"><div class="p-img"></div><b>Frutas · cesta</b><div class="p-price">R$ 31,00 <i>+</i></div></div>
+              </div>
+            </div>
+          </div></div>
+          <!-- rastreio -->
+          <div class="phone"><div class="scr">
+            <div class="notch"></div>
+            <div class="p-map">
+              <svg viewBox="0 0 208 260" fill="none" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                <path d="M30 224 C 74 176, 58 108, 122 88 S 176 70, 184 40" style="stroke:var(--pine);opacity:.35" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="2 10"/>
+                <path d="M30 224 C 74 176, 58 108, 122 88" style="stroke:var(--pine)" stroke-width="3.5" stroke-linecap="round"/>
+                <circle cx="30" cy="224" r="6" style="fill:var(--pine)"/>
+                <circle cx="122" cy="88" r="8" style="fill:var(--surface);stroke:var(--pine)" stroke-width="3.5"/>
+                <path d="M184 28 c 7 0 12 5 12 12 c 0 9 -12 18 -12 18 c 0 0 -12 -9 -12 -18 c 0 -7 5 -12 12 -12 z" style="fill:var(--signal)"/>
+              </svg>
+            </div>
+            <div class="p-sheet">
+              <div class="p-sheet-row"><b>A caminho</b><span class="pill ok">12 min</span></div>
+              <div class="p-bar"><i style="width:64%"></i></div>
+              <div class="p-eta">entregador · 2,1 km · chega às 14:38</div>
+            </div>
+          </div></div>
+          <!-- chat IA -->
+          <div class="phone"><div class="scr">
+            <div class="notch"></div>
+            <div class="p-chat">
+              <div class="msg in">Achei 3 opções de café perto de você.</div>
+              <div class="msg mcard">
+                <div class="mc-img"></div>
+                <div><b>Café torrado 500 g</b><span>R$ 24,90 · 1,2 km</span></div>
+              </div>
+              <div class="msg out">Adiciona esse no carrinho</div>
+              <div class="msg in">Pronto — quer que eu já monte a entrega?</div>
+              <div class="msg typing"><i></i><i></i><i></i></div>
+            </div>
+            <div class="p-input"><span>Pergunte à assistente…</span><i class="send">↑</i></div>
+          </div></div>
+        </div>
+        <p class="fig-cap">Mockups · app do consumidor: vitrine, rastreamento de entrega e assistente de compras</p>
+      </div>
+
+      <div class="prj-grid">
+        <div class="card reveal">
+          <p style="margin-top:0">
+            Um monorepo onde os três apps compartilham tipos, tema e cliente de API: o app do
+            <b>consumidor</b> (vitrine, carrinho, checkout e chat de IA), o do <b>lojista</b> (pedidos,
+            produtos, estoque e permissões por equipe) e o do <b>entregador</b> (rotas, GPS e entregas).
+            O backend expõe uma API REST e eventos em tempo real.
+          </p>
+        </div>
+        <div class="card reveal">
+          <dl class="kv">
+            <dt>Papel</dt><dd>Full-stack · mobile + backend</dd>
+            <dt>Escopo</dt><dd>3 apps · API REST · realtime</dd>
+            <dt>Padrão</dt><dd>Feature-Sliced Design · spec-driven</dd>
+            <dt>Tempo real</dt><dd>rastreamento via WebSocket + mapas</dd>
+            <dt>Stack</dt>
+            <dd><div class="tagset">
+              <span class="chip">React Native</span><span class="chip">Expo</span>
+              <span class="chip">Node · Express</span><span class="chip">Prisma</span>
+              <span class="chip">Postgres</span><span class="chip">Socket.IO</span>
+              <span class="chip">OpenAI</span>
+            </div></dd>
+          </dl>
+        </div>
+      </div>
+
+      <p class="subhead">Como foi feito</p>
+      <div class="howto">
+        <div class="h reveal">
+          <div class="k">monorepo</div>
+          <h4>Três apps, uma base</h4>
+          <p>Workspaces pnpm com packages de tipos, tema e cliente de API compartilhados — trocar um contrato ecoa nos três apps de uma vez.</p>
+        </div>
+        <div class="h reveal">
+          <div class="k">spec-driven</div>
+          <h4>A spec é a fonte da verdade</h4>
+          <p>Cada rota, evento e ferramenta de IA nasce de uma spec tipada. Dela saem os testes, a doc OpenAPI e o contexto do agente — o CI trava o merge se algo sair de sincronia.</p>
+        </div>
+        <div class="h reveal">
+          <div class="k">tempo real</div>
+          <h4>Entrega ao vivo</h4>
+          <p>Eventos por WebSocket (Socket.IO) e mapas com rota/ETA levam a posição do entregador até a tela do consumidor em tempo real.</p>
+        </div>
+        <div class="h reveal">
+          <div class="k">ia</div>
+          <h4>Assistente que age</h4>
+          <p>Um agente de compras com <em>tool-calling</em> busca produtos e monta pedidos, ancorado no contexto gerado das specs para não alucinar chamadas de API.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STACK -->
+  <section id="stack">
+    <div class="wrap">
+      <p class="eyebrow">Ferramentas</p>
+      <h2 class="sec">Stack, organizada por camada</h2>
+      <p class="sec-lead">Não é uma lista de tudo que já toquei — é o que uso com fluência para entregar features completas.</p>
+
+      <div class="stack-grid">
+        <div class="st reveal"><h3><span class="idx">01</span> Backend</h3>
+          <ul><li>Python 3.14</li><li>FastAPI</li><li>Node · Express</li><li>SQLModel</li><li>Prisma</li><li>SQLAlchemy async</li><li>Postgres</li><li>Redis</li><li>Socket.IO</li><li>Alembic</li><li>Pydantic</li></ul></div>
+        <div class="st reveal"><h3><span class="idx">02</span> Frontend &amp; Mobile</h3>
+          <ul><li>Next.js 16</li><li>React 19</li><li>React Native · Expo</li><li>TypeScript</li><li>Tailwind 4 · NativeWind</li><li>base-ui / shadcn</li><li>Zustand</li><li>TanStack Query</li><li>Recharts</li><li>React-Leaflet</li></ul></div>
+        <div class="st reveal"><h3><span class="idx">03</span> IA / LLM</h3>
+          <ul><li>OpenAI · gpt-4o</li><li>LangChain</li><li>LangGraph</li><li>RAG de insumos</li><li>tool-calling</li><li>fallback determinístico</li></ul></div>
+        <div class="st reveal"><h3><span class="idx">04</span> Arquitetura</h3>
+          <ul><li>Clean Architecture</li><li>Ports &amp; adapters</li><li>Feature-Sliced Design</li><li>BFF</li><li>Multitenancy</li><li>RBAC · sessões · PAT</li></ul></div>
+        <div class="st reveal"><h3><span class="idx">05</span> Infra &amp; fluxo</h3>
+          <ul><li>Docker</li><li>Railway</li><li>Supabase</li><li>GitHub Actions</li><li>Spec-Kit</li><li>uv · pnpm</li><li>Conventional Commits</li></ul></div>
+        <div class="st reveal"><h3><span class="idx">06</span> Domínios extras</h3>
+          <ul><li>PDF · WeasyPrint</li><li>Geo · Shapely</li><li>Shapefiles</li><li>pdfplumber</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESSO -->
+  <section id="processo">
+    <div class="wrap">
+      <p class="eyebrow">Como eu trabalho</p>
+      <h2 class="sec">O código certo é o que roda — e não vaza</h2>
+      <p class="sec-lead">Alguns hábitos que carrego pra qualquer time.</p>
+
+      <div class="proc-grid">
+        <div class="proc reveal"><div class="no">// contrato primeiro</div>
+          <h3>Backend antes do front</h3>
+          <p>Fecho e valido o contrato da API antes de desenhar a tela. Decisão que muda schema? Pergunto antes de codar.</p></div>
+        <div class="proc reveal"><div class="no">// verificação real</div>
+          <h3>Nada de "deve funcionar"</h3>
+          <p>Só considero pronto o que verifiquei rodando de verdade — subo a stack, exercito o caso e testo os cenários de falha.</p></div>
+        <div class="proc reveal"><div class="no">// migrations à mão</div>
+          <h3>Migrations encadeadas, sem surpresa</h3>
+          <p>Alembic escrito à mão e encadeado no head atual. Depois de sincronizar com a main, re-checo os heads antes de subir.</p></div>
+        <div class="proc reveal"><div class="no">// revisão</div>
+          <h3>Reviso o diff inteiro</h3>
+          <p>Leio a mudança toda e passo um revisor independente antes de abrir o PR. Git em inglês, Conventional Commits.</p></div>
+        <div class="proc reveal"><div class="no">// da main atualizada</div>
+          <h3>Sempre do código mais atual</h3>
+          <p>O time faz merge contínuo. Começo e integro sempre da main sincronizada — começar desatualizado é retrabalho garantido.</p></div>
+        <div class="proc reveal"><div class="no">// spec-driven</div>
+          <h3>Da especificação ao código</h3>
+          <p>Em features médias/grandes, saio do spec para o plano e para as tasks (Spec Kit) — o "porquê" fica versionado no repo.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="contact">
+    <div class="wrap">
+      <p class="eyebrow">Contato</p>
+      <h2 class="sec">Vamos conversar sobre o próximo projeto?</h2>
+      <p class="sec-lead">Disponível para posições full-stack (Python + React/Next). Respondo rápido por e-mail.</p>
+      <div class="contact-links">
+        <button type="button" class="btn primary copy-email" data-email="jb.juniorworks@gmail.com" title="Copiar e-mail" aria-label="Copiar e-mail jb.juniorworks@gmail.com">
+          <svg class="ic-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          <svg class="ic-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+          <span class="lbl">jb.juniorworks@gmail.com</span>
+        </button>
+        <a class="btn" href="https://www.linkedin.com/in/jos%C3%A9-batistafullstack/" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v6h-4v-6a2 2 0 0 0-4 0v6h-4v-10h4v1.5"/><circle cx="4" cy="4" r="2"/><path d="M2 10h4v10H2z"/></svg>
+          LinkedIn
+        </a>
+        <a class="btn" href="https://github.com/jbjuniorworks-prog" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3-.3 6.2-1.5 6.2-6.7A5.2 5.2 0 0 0 20 5a4.9 4.9 0 0 0-.1-3.6s-1.2-.4-4 1.5a13.4 13.4 0 0 0-7 0C6.1 1 4.9 1.4 4.9 1.4A4.9 4.9 0 0 0 4.8 5 5.2 5.2 0 0 0 3.5 8.6c0 5.2 3.2 6.4 6.2 6.7a3.4 3.4 0 0 0-.9 2.6V22"/></svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot-in">
+    <span>© 2026 · José Batista</span>
+    <span>construído como documento técnico — adapta ao tema claro/escuro</span>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var els = document.querySelectorAll(".reveal");
+    if (reduce || !("IntersectionObserver" in window)) {
+      els.forEach(function (e) { e.classList.add("in"); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+    els.forEach(function (e) { io.observe(e); });
+  })();
+</script>
+
+<script>
+  (function () {
+    function fallbackCopy(text) {
+      try {
+        var ta = document.createElement("textarea");
+        ta.value = text; ta.setAttribute("readonly", "");
+        ta.style.position = "absolute"; ta.style.left = "-9999px";
+        document.body.appendChild(ta); ta.select();
+        var ok = document.execCommand("copy");
+        document.body.removeChild(ta);
+        return ok;
+      } catch (e) { return false; }
+    }
+    document.querySelectorAll(".copy-email").forEach(function (btn) {
+      var lbl = btn.querySelector(".lbl");
+      var original = lbl.textContent;
+      var timer;
+      btn.addEventListener("click", function () {
+        var email = btn.getAttribute("data-email");
+        var show = function (ok) {
+          lbl.textContent = ok ? "e-mail copiado!" : original;
+          if (ok) btn.classList.add("copied");
+          clearTimeout(timer);
+          timer = setTimeout(function () {
+            btn.classList.remove("copied");
+            lbl.textContent = original;
+          }, 1900);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(email).then(function () { show(true); }, function () { show(fallbackCopy(email)); });
+        } else {
+          show(fallbackCopy(email));
+        }
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>
