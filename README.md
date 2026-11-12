@@ -2,7 +2,7 @@
 
 Portfólio pessoal de **José Batista** — desenvolvedor full-stack (Python + TypeScript).
 
-🌐 **Ao vivo:** https://jbjuniorworks-prog.github.io
+**Ao vivo:** https://jbjuniorworks-prog.github.io
 
 ---
 

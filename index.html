@@ -25,7 +25,7 @@
   <meta name="twitter:title" content="José Batista — Desenvolvedor Full-stack">
   <meta name="twitter:description" content="Full-stack (Python + TypeScript): plataforma SaaS de licenciamento ambiental e marketplace local com entrega em tempo real.">
   <meta name="twitter:image" content="https://jbjuniorworks-prog.github.io/preview.png">
-  <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">🌲</text></svg>'>
+  <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="%231b6b4a"/><text x="32" y="42" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="700" fill="%23f5faf6">JB</text></svg>'>
 <style>
   :root {
     --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -129,12 +129,11 @@
     border-bottom: 1px solid var(--line-soft);
   }
   .top-in { display: flex; align-items: center; justify-content: space-between; height: 60px; }
-  .brand { font-family: var(--font-mono); font-weight: 600; font-size: .9rem; letter-spacing: .02em; }
-  .brand b { color: var(--pine); }
+  .brand { font-weight: 700; font-size: 1rem; letter-spacing: -.01em; }
   .nav { display: flex; gap: 24px; }
   .nav a {
-    font-family: var(--font-mono); font-size: .78rem; text-decoration: none;
-    color: var(--ink-soft); letter-spacing: .03em; padding: 4px 0; position: relative;
+    font-size: .86rem; text-decoration: none;
+    color: var(--ink-soft); padding: 4px 0; position: relative;
   }
   .nav a::after {
     content: ""; position: absolute; left: 0; right: 100%; bottom: -2px; height: 1.5px;
@@ -146,7 +145,7 @@
 
   /* ---------- eyebrow / section headings ---------- */
   .eyebrow {
-    font-family: var(--font-mono); font-size: .74rem; letter-spacing: .18em;
+    font-size: .74rem; font-weight: 650; letter-spacing: .14em;
     text-transform: uppercase; color: var(--pine);
     display: inline-flex; align-items: center; gap: 9px; margin: 0 0 18px;
   }
@@ -159,7 +158,7 @@
     letter-spacing: -.02em; font-weight: 780; text-wrap: balance; max-width: 22ch;
   }
   .sec-lead { color: var(--ink-soft); max-width: 62ch; font-size: 1.06rem; margin: 0; }
-  .subhead { font-family: var(--font-mono); font-size: .74rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint); margin: 56px 0 4px; display: flex; align-items: center; gap: 10px; }
+  .subhead { font-size: .74rem; font-weight: 650; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint); margin: 56px 0 4px; display: flex; align-items: center; gap: 10px; }
   .subhead::before { content: ""; width: 16px; height: 1.5px; background: var(--ink-faint); }
 
   /* ---------- hero ---------- */
@@ -176,8 +175,8 @@
   }
   .hero .wrap { position: relative; z-index: 1; }
   .hero-tag {
-    font-family: var(--font-mono); font-size: .78rem; color: var(--ink-soft);
-    letter-spacing: .06em; display: flex; align-items: center; gap: 10px; margin-bottom: 26px;
+    font-size: .92rem; font-weight: 600; color: var(--ink-soft);
+    display: flex; align-items: center; gap: 10px; margin-bottom: 26px;
   }
   .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--pine); box-shadow: 0 0 0 4px var(--moss-wash); }
   h1 {
@@ -190,8 +189,8 @@
 
   .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 54px; }
   .btn {
-    display: inline-flex; align-items: center; gap: 9px; font-family: var(--font-mono);
-    font-size: .84rem; letter-spacing: .02em; text-decoration: none; padding: 11px 18px;
+    display: inline-flex; align-items: center; gap: 9px; font-family: inherit;
+    font-size: .92rem; font-weight: 600; text-decoration: none; padding: 11px 18px;
     border-radius: 9px; border: 1px solid var(--line); background: var(--surface); color: var(--ink);
     transition: transform .18s ease, border-color .18s ease, background .18s ease;
   }
@@ -209,7 +208,7 @@
   .metric { background: var(--surface); padding: 22px 20px; }
   .metric .n { font-size: clamp(1.4rem, 3.4vw, 2rem); font-weight: 780; letter-spacing: -.02em; font-variant-numeric: tabular-nums; line-height: 1; }
   .metric .n .u { color: var(--pine); }
-  .metric .l { font-family: var(--font-mono); font-size: .72rem; color: var(--ink-soft); margin-top: 10px; line-height: 1.4; letter-spacing: .01em; }
+  .metric .l { font-size: .82rem; color: var(--ink-soft); margin-top: 10px; line-height: 1.4; }
   @media (max-width: 720px) { .metrics { grid-template-columns: repeat(2, 1fr); } }
 
   /* ---------- project intro ---------- */
@@ -218,14 +217,14 @@
   .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; box-shadow: var(--shadow); }
   .card p { color: var(--ink-soft); }
   .kv { display: grid; grid-template-columns: auto 1fr; gap: 10px 18px; font-size: .92rem; margin: 0; }
-  .kv dt { font-family: var(--font-mono); font-size: .74rem; letter-spacing: .04em; color: var(--ink-faint); text-transform: uppercase; padding-top: 3px; }
+  .kv dt { font-size: .74rem; font-weight: 650; letter-spacing: .06em; color: var(--ink-faint); text-transform: uppercase; padding-top: 3px; }
   .kv dd { margin: 0; color: var(--ink); }
   .tagset { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 4px; }
   .chip { font-family: var(--font-mono); font-size: .72rem; padding: 4px 9px; border-radius: 6px; background: var(--moss-wash); color: var(--pine-deep); border: 1px solid color-mix(in srgb, var(--pine) 22%, transparent); }
 
   /* ---------- mockups (shared) ---------- */
   .figure { margin-top: 42px; }
-  .fig-cap { font-family: var(--font-mono); font-size: .72rem; color: var(--ink-faint); letter-spacing: .02em; margin: 16px 0 0; text-align: center; }
+  .fig-cap { font-size: .82rem; color: var(--ink-faint); margin: 16px 0 0; text-align: center; }
   .pill { font-family: var(--font-mono); font-size: .68rem; padding: 3px 10px; border-radius: 20px; border: 1px solid var(--line); white-space: nowrap; }
   .pill.ok { background: var(--moss-wash); color: var(--pine); border-color: color-mix(in srgb, var(--pine) 34%, transparent); }
   .pill.warn { background: var(--grave-wash); color: var(--grave); border-color: color-mix(in srgb, var(--grave) 42%, var(--line)); }
@@ -302,6 +301,7 @@
   .p-input { display: flex; align-items: center; gap: 8px; padding: 10px 12px; border-top: 1px solid var(--line-soft); background: var(--surface); }
   .p-input span { flex: 1; font-size: .72rem; color: var(--ink-faint); background: var(--surface-2); border: 1px solid var(--line-soft); border-radius: 16px; padding: 7px 12px; }
   .p-input .send { width: 28px; height: 28px; border-radius: 50%; background: var(--pine); color: #f5faf6; display: grid; place-items: center; font-style: normal; font-size: .78rem; flex: 0 0 auto; }
+  .p-input .send svg { width: 14px; height: 14px; }
 
   /* ---------- architecture diagram ---------- */
   .arch-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; margin-top: 20px; align-items: center; }
@@ -339,7 +339,7 @@
   .sev-row { display: flex; flex-wrap: wrap; gap: 10px; }
   .sev { display: flex; align-items: baseline; gap: 9px; padding: 10px 14px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); }
   .sev .c { font-size: 1.35rem; font-weight: 780; font-variant-numeric: tabular-nums; line-height: 1; }
-  .sev .t { font-family: var(--font-mono); font-size: .72rem; letter-spacing: .02em; color: var(--ink-soft); }
+  .sev .t { font-size: .8rem; color: var(--ink-soft); }
   .sev.crit { border-color: var(--crit); background: var(--crit-wash); } .sev.crit .c { color: var(--crit); }
   .sev.grave { border-color: color-mix(in srgb, var(--grave) 60%, var(--line)); background: var(--grave-wash); } .sev.grave .c { color: var(--grave); }
   .sev.med { border-color: color-mix(in srgb, var(--med) 45%, var(--line)); background: var(--med-wash); } .sev.med .c { color: var(--med); }
@@ -349,7 +349,7 @@
   @media (max-width: 640px) { .howto { grid-template-columns: 1fr; } }
   .howto .h { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 20px 22px; transition: border-color .18s ease; }
   .howto .h:hover { border-color: var(--pine); }
-  .howto .k { font-family: var(--font-mono); font-size: .7rem; color: var(--pine); letter-spacing: .04em; }
+  .howto .k { font-size: .7rem; font-weight: 650; color: var(--pine); letter-spacing: .1em; text-transform: uppercase; }
   .howto .h h4 { margin: 8px 0 6px; font-size: 1rem; letter-spacing: -.01em; }
   .howto .h p { margin: 0; color: var(--ink-soft); font-size: .92rem; }
 
@@ -359,7 +359,7 @@
   @media (max-width: 560px) { .stack-grid { grid-template-columns: 1fr; } }
   .st { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; transition: transform .18s ease, border-color .18s ease; }
   .st:hover { transform: translateY(-3px); border-color: var(--pine); }
-  .st h3 { font-family: var(--font-mono); font-size: .78rem; letter-spacing: .06em; text-transform: uppercase; color: var(--pine); margin: 0 0 14px; display: flex; align-items: center; gap: 9px; }
+  .st h3 { font-size: .78rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--pine); margin: 0 0 14px; display: flex; align-items: center; gap: 9px; }
   .st h3 .idx { color: var(--ink-faint); }
   .st ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 7px; }
   .st li { font-size: .85rem; padding: 5px 10px; border-radius: 7px; background: var(--surface-2); color: var(--ink); border: 1px solid var(--line-soft); }
@@ -368,7 +368,7 @@
   .proc-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--line-soft); border: 1px solid var(--line-soft); border-radius: var(--radius); overflow: hidden; margin-top: 40px; }
   @media (max-width: 720px) { .proc-grid { grid-template-columns: 1fr; } }
   .proc { background: var(--surface); padding: 26px; }
-  .proc .no { font-family: var(--font-mono); font-size: .74rem; color: var(--pine); letter-spacing: .06em; }
+  .proc .no { font-size: .7rem; font-weight: 650; color: var(--pine); letter-spacing: .1em; text-transform: uppercase; }
   .proc h3 { margin: 8px 0 8px; font-size: 1.08rem; letter-spacing: -.01em; }
   .proc p { margin: 0; color: var(--ink-soft); font-size: .95rem; }
 
@@ -377,7 +377,7 @@
   .contact-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
 
   footer { border-top: 1px solid var(--line-soft); padding: 30px 0 46px; }
-  .foot-in { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-family: var(--font-mono); font-size: .74rem; color: var(--ink-faint); }
+  .foot-in { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: .84rem; color: var(--ink-faint); }
 
   /* reveal */
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s cubic-bezier(.2,.6,.2,1), transform .7s cubic-bezier(.2,.6,.2,1); }
@@ -391,7 +391,7 @@
 
 <header class="top">
   <div class="wrap top-in">
-    <span class="brand">jose<b>.batista</b></span>
+    <span class="brand">José Batista</span>
     <nav class="nav">
       <a href="#licenciamento">licenciamento</a>
       <a href="#marketplace">marketplace</a>
@@ -453,7 +453,7 @@
             (que confere e libera) e o <b>portal público do empreendedor</b> — e cada recurso é escopado por
             cidade, sem vazar dados entre municípios. Entreguei desde a modelagem do núcleo de licenciamento
             até o treinamento de IA de verdade, sempre no mesmo padrão: <b>slice vertical</b>
-            (domínio → dados → apresentação), migrations escritas à mão e verificação rodando de verdade
+            (domínio, dados e apresentação), migrations escritas à mão e verificação rodando de verdade
             antes de subir.
           </p>
         </div>
@@ -520,7 +520,7 @@
             </div>
           </div>
         </div>
-        <p class="fig-cap">Mockup · configuração de tipos de licença com o gating de IA (treino → conferência → no ar)</p>
+        <p class="fig-cap">Mockup · configuração de tipos de licença com o gating de IA: treino, conferência e publicação</p>
       </div>
 
       <!-- how it was made: architecture -->
@@ -551,7 +551,7 @@
           </div>
           <div class="lg-item">
             <span class="lg-k">data</span>
-            <p class="lg-v">Implementações concretas das portas. <span>Troco o adapter (mock → SQL, stub → OpenAI real) sem tocar no domínio.</span></p>
+            <p class="lg-v">Implementações concretas das portas. <span>Troco o adapter (de mock para SQL, de stub para OpenAI real) sem tocar no domínio.</span></p>
           </div>
           <div class="lg-item">
             <span class="lg-k">presentation</span>
@@ -650,7 +650,7 @@
               <div class="msg in">Pronto — quer que eu já monte a entrega?</div>
               <div class="msg typing"><i></i><i></i><i></i></div>
             </div>
-            <div class="p-input"><span>Pergunte à assistente…</span><i class="send">↑</i></div>
+            <div class="p-input"><span>Pergunte à assistente…</span><i class="send"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></i></div>
           </div></div>
         </div>
         <p class="fig-cap">Mockups · app do consumidor: vitrine, rastreamento de entrega e assistente de compras</p>
@@ -740,22 +740,22 @@
       <p class="sec-lead">Alguns hábitos que carrego pra qualquer time.</p>
 
       <div class="proc-grid">
-        <div class="proc reveal"><div class="no">// contrato primeiro</div>
+        <div class="proc reveal"><div class="no">contrato primeiro</div>
           <h3>Backend antes do front</h3>
           <p>Fecho e valido o contrato da API antes de desenhar a tela. Decisão que muda schema? Pergunto antes de codar.</p></div>
-        <div class="proc reveal"><div class="no">// verificação real</div>
+        <div class="proc reveal"><div class="no">verificação real</div>
           <h3>Nada de "deve funcionar"</h3>
           <p>Só considero pronto o que verifiquei rodando de verdade — subo a stack, exercito o caso e testo os cenários de falha.</p></div>
-        <div class="proc reveal"><div class="no">// migrations à mão</div>
+        <div class="proc reveal"><div class="no">migrations à mão</div>
           <h3>Migrations encadeadas, sem surpresa</h3>
           <p>Alembic escrito à mão e encadeado no head atual. Depois de sincronizar com a main, re-checo os heads antes de subir.</p></div>
-        <div class="proc reveal"><div class="no">// revisão</div>
+        <div class="proc reveal"><div class="no">revisão</div>
           <h3>Reviso o diff inteiro</h3>
           <p>Leio a mudança toda e passo um revisor independente antes de abrir o PR. Git em inglês, Conventional Commits.</p></div>
-        <div class="proc reveal"><div class="no">// da main atualizada</div>
+        <div class="proc reveal"><div class="no">da main atualizada</div>
           <h3>Sempre do código mais atual</h3>
           <p>O time faz merge contínuo. Começo e integro sempre da main sincronizada — começar desatualizado é retrabalho garantido.</p></div>
-        <div class="proc reveal"><div class="no">// spec-driven</div>
+        <div class="proc reveal"><div class="no">spec-driven</div>
           <h3>Da especificação ao código</h3>
           <p>Em features médias/grandes, saio do spec para o plano e para as tasks (Spec Kit) — o "porquê" fica versionado no repo.</p></div>
       </div>
@@ -790,7 +790,7 @@
 <footer>
   <div class="wrap foot-in">
     <span>© 2026 · José Batista</span>
-    <span>construído como documento técnico — adapta ao tema claro/escuro</span>
+    <span>Aracaju, SE · Brasil</span>
   </div>
 </footer>
 
