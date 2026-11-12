@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
   <title>Portfólio · José Batista — Full-stack Dev</title>
-  <meta name="description" content="Portfólio de José Batista, desenvolvedor full-stack (Python + TypeScript). Plataforma SaaS de licenciamento ambiental e marketplace local com entrega em tempo real.">
+  <meta name="description" content="Portfólio de José Batista, desenvolvedor full-stack (Python + TypeScript). Plataforma SaaS de licenciamento ambiental, marketplace com entrega em tempo real, projetos pessoais e freelas.">
   <meta name="author" content="José Batista">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#1b6b4a">
@@ -15,7 +15,7 @@
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="José Batista — Full-stack Dev">
   <meta property="og:title" content="José Batista — Desenvolvedor Full-stack">
-  <meta property="og:description" content="Full-stack (Python + TypeScript): plataforma SaaS de licenciamento ambiental e marketplace local com entrega em tempo real.">
+  <meta property="og:description" content="Full-stack (Python + TypeScript): SaaS de licenciamento ambiental, marketplace em tempo real, projetos pessoais e freelas.">
   <meta property="og:url" content="https://jbjuniorworks-prog.github.io/">
   <meta property="og:image" content="https://jbjuniorworks-prog.github.io/preview.png">
   <meta property="og:image:width" content="1200">
@@ -23,7 +23,7 @@
   <meta property="og:image:alt" content="José Batista — Desenvolvedor Full-stack. Licenciamento SaaS, marketplace mobile, IA em produção.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="José Batista — Desenvolvedor Full-stack">
-  <meta name="twitter:description" content="Full-stack (Python + TypeScript): plataforma SaaS de licenciamento ambiental e marketplace local com entrega em tempo real.">
+  <meta name="twitter:description" content="Full-stack (Python + TypeScript): SaaS de licenciamento ambiental, marketplace em tempo real, projetos pessoais e freelas.">
   <meta name="twitter:image" content="https://jbjuniorworks-prog.github.io/preview.png">
   <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="%231b6b4a"/><text x="32" y="42" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="700" fill="%23f5faf6">JB</text></svg>'>
 <style>
@@ -408,6 +408,18 @@
   .bid-t { font-size: .76rem; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
   .bid-t b { color: var(--signal); }
 
+  /* ---------- freelance ---------- */
+  .howto.three { grid-template-columns: repeat(3, 1fr); margin-top: 40px; }
+  @media (max-width: 860px) { .howto.three { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px) { .howto.three { grid-template-columns: 1fr; } }
+  .steps { list-style: none; margin: 24px 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line-soft); border: 1px solid var(--line-soft); border-radius: var(--radius); overflow: hidden; }
+  .steps li { background: var(--surface); padding: 20px 22px; display: flex; flex-direction: column; gap: 6px; }
+  .steps b { font-size: .7rem; font-weight: 650; letter-spacing: .1em; text-transform: uppercase; color: var(--pine); }
+  .steps span { color: var(--ink-soft); font-size: .92rem; }
+  @media (max-width: 860px) { .steps { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 520px) { .steps { grid-template-columns: 1fr; } }
+  .free-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+
   /* ---------- process ---------- */
   .proc-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--line-soft); border: 1px solid var(--line-soft); border-radius: var(--radius); overflow: hidden; margin-top: 40px; }
   @media (max-width: 720px) { .proc-grid { grid-template-columns: 1fr; } }
@@ -440,6 +452,7 @@
       <a href="#licenciamento">licenciamento</a>
       <a href="#marketplace">marketplace</a>
       <a href="#pessoais">pessoais</a>
+      <a href="#freelas">freelas</a>
       <a href="#stack">stack</a>
       <a href="#processo">processo</a>
       <a href="#contato">contato</a>
@@ -460,13 +473,14 @@
         <b>marketplace local em React Native</b>, com três apps mobile, entrega em tempo real e
         assistente de compras com IA. Fora do trabalho, construo produtos próprios: um
         <b>delivery multi-loja</b>, um <b>roteirizador</b> que entregadores usam no dia a dia e uma
-        <b>casa de leilões com lances ao vivo</b>.
+        <b>casa de leilões com lances ao vivo</b>. Também atendo <b>projetos freelance</b>.
       </p>
       <div class="cta-row">
         <a class="btn primary" href="#licenciamento">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           Ver os projetos
         </a>
+        <a class="btn" href="#freelas">Contratar para um projeto</a>
         <button type="button" class="btn copy-email" data-email="jb.juniorworks@gmail.com" title="Copiar e-mail" aria-label="Copiar e-mail jb.juniorworks@gmail.com">
           <svg class="ic-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
           <svg class="ic-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
@@ -875,6 +889,66 @@
     </div>
   </section>
 
+  <!-- FREELAS -->
+  <section id="freelas">
+    <div class="wrap">
+      <p class="eyebrow">Freelas</p>
+      <h2 class="sec">Precisa de um site ou de um sistema?</h2>
+      <p class="sec-lead">
+        Também atendo projetos freelance, para negócios e pessoas que querem tirar uma ideia do papel
+        ou consertar o que já existe. Explico tudo sem tecniquês e você acompanha o andamento.
+      </p>
+
+      <div class="howto three">
+        <div class="h reveal">
+          <div class="k">Sites</div>
+          <h4>Sites e landing pages</h4>
+          <p>Páginas rápidas, com cara profissional, feitas para funcionar bem no celular.</p>
+        </div>
+        <div class="h reveal">
+          <div class="k">Sistemas</div>
+          <h4>Sistemas sob medida</h4>
+          <p>Painéis administrativos, cadastros, agendamentos, pedidos e estoque, do banco de dados à tela.</p>
+        </div>
+        <div class="h reveal">
+          <div class="k">Integrações</div>
+          <h4>APIs e integrações</h4>
+          <p>Conecto o seu sistema a outros serviços e automatizo o que hoje é feito à mão.</p>
+        </div>
+        <div class="h reveal">
+          <div class="k">IA</div>
+          <h4>Inteligência artificial no seu produto</h4>
+          <p>Assistentes e chatbots com a API da OpenAI, ligados aos dados do seu negócio.</p>
+        </div>
+        <div class="h reveal">
+          <div class="k">Celular</div>
+          <h4>Apps para celular</h4>
+          <p>Apps instaláveis (PWA) e apps em React Native, inclusive para quem trabalha na rua.</p>
+        </div>
+        <div class="h reveal">
+          <div class="k">Manutenção</div>
+          <h4>Correções e melhorias</h4>
+          <p>Bugs, lentidão e funcionalidades novas em projetos que já existem.</p>
+        </div>
+      </div>
+
+      <p class="subhead">Como funciona</p>
+      <ol class="steps reveal">
+        <li><b>1 · Conversa</b><span>Você conta o problema e eu digo com sinceridade se consigo ajudar.</span></li>
+        <li><b>2 · Proposta</b><span>Escopo, prazo e valor combinados por escrito antes de começar.</span></li>
+        <li><b>3 · Andamento</b><span>Você vê o projeto evoluindo durante o trabalho, não só no fim.</span></li>
+        <li><b>4 · Entrega</b><span>Código organizado e explicado, pronto para você usar e manter.</span></li>
+      </ol>
+
+      <div class="free-cta">
+        <a class="btn primary" href="#contato">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          Falar sobre um projeto
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- STACK -->
   <section id="stack">
     <div class="wrap">
@@ -934,7 +1008,7 @@
     <div class="wrap">
       <p class="eyebrow">Contato</p>
       <h2 class="sec">Vamos conversar sobre o próximo projeto?</h2>
-      <p class="sec-lead">Disponível para posições full-stack (Python + React/Next). Respondo rápido por e-mail.</p>
+      <p class="sec-lead">Disponível para vagas full-stack (Python + React/Next) e projetos freelance. Respondo rápido por e-mail.</p>
       <div class="contact-links">
         <button type="button" class="btn primary copy-email" data-email="jb.juniorworks@gmail.com" title="Copiar e-mail" aria-label="Copiar e-mail jb.juniorworks@gmail.com">
           <svg class="ic-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
