@@ -13,7 +13,7 @@ Página única para recrutadores e clientes de freela. Seções, na ordem da pá
 1. **Dois projetos do trabalho** como estudos de caso, no formato *o que é · meu papel · como foi feito*:
    - **Plataforma SaaS de licenciamento ambiental** (govtech): multitenant, Clean Architecture (ports & adapters), IA em produção e uma auditoria de segurança do repositório inteiro.
    - **Marketplace local com entrega em tempo real**: monorepo com três apps mobile (consumidor, lojista, entregador), rastreamento ao vivo e assistente de compras com IA.
-2. **Projetos pessoais**: Brasa (delivery multi-loja, código privado), [Rota de Entregas](https://github.com/jbjuniorworks-prog/rota-entregas) (roteirizador para entregadores) e [Martelo](https://github.com/jbjuniorworks-prog/verzel-leiloes) (casa de leilões com lances ao vivo).
+2. **Projetos pessoais**: [Rota de Entregas](https://github.com/jbjuniorworks-prog/rota-entregas) (roteirizador para entregadores) e [Martelo](https://github.com/jbjuniorworks-prog/verzel-leiloes) (casa de leilões com lances ao vivo), com prints reais, e Brasa (delivery multi-loja, código privado), ainda com ilustração.
 3. **Freelas**: o que eu faço para clientes e como funciona um projeto.
 4. **Stack**, **como eu trabalho**, **experiência e formação** e **contato**.
 
@@ -21,11 +21,14 @@ Página única para recrutadores e clientes de freela. Seções, na ordem da pá
 
 ## Como o site é feito
 
-Uma única página **HTML autocontida** — sem build, sem dependências, sem framework:
+Uma única página **HTML**, sem build, sem dependências e sem framework:
 
 - HTML + CSS com custom properties e **tema claro/escuro automático** (segue o sistema do visitante)
 - JavaScript puro: *reveal on scroll* (IntersectionObserver) e botão de **copiar e‑mail**
-- Mockups (moldura de browser, celulares e as ilustrações dos projetos pessoais) desenhados em **CSS/SVG**, sem imagens
+- Mockups dos projetos do trabalho e a ilustração do Brasa desenhados em **CSS/SVG**
+- Prints reais do Rota de Entregas e do Martelo em `img/` (WebP), sem dado de pessoa real:
+  - **Rota de Entregas**: tirados do app rodando localmente com o banco simulado dos testes do próprio projeto e uma planilha de endereços inventados;
+  - **Martelo**: o print da sala do lote que está em `docs/screenshots` do repositório dele, com dados de demonstração.
 - Acessibilidade: foco por teclado visível, `prefers-reduced-motion` respeitado
 - Hospedagem: **GitHub Pages**
 
