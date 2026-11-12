@@ -42,6 +42,7 @@
     --pine: #1b6b4a;
     --pine-deep: #124d35;
     --moss-wash: #dbe8de;
+    --on-pine: #f5faf6;
     --signal: #a94e1c;
     --signal-wash: #efe0d3;
 
@@ -70,6 +71,7 @@
       --pine: #49b380;
       --pine-deep: #2f9061;
       --moss-wash: #16281f;
+      --on-pine: #0b1512;
       --signal: #e08a54;
       --signal-wash: #26190f;
 
@@ -86,7 +88,7 @@
     --paper: #edf1ec; --surface: #f7f9f5; --surface-2: #e5eae1;
     --ink: #12211b; --ink-soft: #4a584f; --ink-faint: #75847a;
     --line: #cad5c8; --line-soft: #dbe3d8;
-    --pine: #1b6b4a; --pine-deep: #124d35; --moss-wash: #dbe8de;
+    --pine: #1b6b4a; --pine-deep: #124d35; --moss-wash: #dbe8de; --on-pine: #f5faf6;
     --signal: #a94e1c; --signal-wash: #efe0d3;
     --crit: #b23a2e; --crit-wash: #f0dcd8; --grave: #9e6a12; --grave-wash: #efe4cf; --med: #4f6577; --med-wash: #dde5ea;
     --shadow: 0 1px 2px rgba(18,33,27,.05), 0 8px 30px -18px rgba(18,33,27,.22);
@@ -95,7 +97,7 @@
     --paper: #0b1512; --surface: #12201a; --surface-2: #182a21;
     --ink: #e3ebe3; --ink-soft: #9bae9f; --ink-faint: #6f8377;
     --line: #26362d; --line-soft: #1e2c25;
-    --pine: #49b380; --pine-deep: #2f9061; --moss-wash: #16281f;
+    --pine: #49b380; --pine-deep: #2f9061; --moss-wash: #16281f; --on-pine: #0b1512;
     --signal: #e08a54; --signal-wash: #26190f;
     --crit: #e5705f; --crit-wash: #291714; --grave: #dfa63c; --grave-wash: #241c0f; --med: #8fa5b5; --med-wash: #131f27;
     --shadow: 0 1px 2px rgba(0,0,0,.3), 0 12px 40px -20px rgba(0,0,0,.7);
@@ -195,7 +197,7 @@
     transition: transform .18s ease, border-color .18s ease, background .18s ease;
   }
   .btn:hover { transform: translateY(-2px); border-color: var(--pine); }
-  .btn.primary { background: var(--pine); border-color: var(--pine); color: #f5faf6; }
+  .btn.primary { background: var(--pine); border-color: var(--pine); color: var(--on-pine); }
   .btn.primary:hover { background: var(--pine-deep); border-color: var(--pine-deep); }
   .btn svg { width: 15px; height: 15px; }
   button.btn { cursor: pointer; -webkit-appearance: none; appearance: none; }
