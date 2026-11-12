@@ -8,12 +8,16 @@ Portfólio pessoal de **José Batista** — desenvolvedor full-stack (Python + T
 
 ## Sobre
 
-Página única que apresenta dois projetos recentes como estudos de caso, no formato *o que é · meu papel · como foi feito*:
+Página única para recrutadores e clientes de freela. Seções, na ordem da página:
 
-- **Plataforma SaaS de licenciamento ambiental** (govtech) — multitenant, Clean Architecture (ports & adapters), IA em produção e uma auditoria de segurança do repositório inteiro.
-- **Marketplace local com entrega em tempo real** — monorepo com três apps mobile (consumidor, lojista, entregador), rastreamento ao vivo e assistente de compras com IA.
+1. **Dois projetos do trabalho** como estudos de caso, no formato *o que é · meu papel · como foi feito*:
+   - **Plataforma SaaS de licenciamento ambiental** (govtech): multitenant, Clean Architecture (ports & adapters), IA em produção e uma auditoria de segurança do repositório inteiro.
+   - **Marketplace local com entrega em tempo real**: monorepo com três apps mobile (consumidor, lojista, entregador), rastreamento ao vivo e assistente de compras com IA.
+2. **Projetos pessoais**: Brasa (delivery multi-loja, código privado), [Rota de Entregas](https://github.com/jbjuniorworks-prog/rota-entregas) (roteirizador para entregadores) e [Martelo](https://github.com/jbjuniorworks-prog/verzel-leiloes) (casa de leilões com lances ao vivo).
+3. **Freelas**: o que eu faço para clientes e como funciona um projeto.
+4. **Stack**, **como eu trabalho**, **experiência e formação** e **contato**.
 
-> Os projetos aparecem de forma anônima, como exemplos — sem nomes de clientes.
+> Os projetos do trabalho aparecem sem o nome dos produtos e dos clientes.
 
 ## Como o site é feito
 
@@ -21,7 +25,7 @@ Uma única página **HTML autocontida** — sem build, sem dependências, sem fr
 
 - HTML + CSS com custom properties e **tema claro/escuro automático** (segue o sistema do visitante)
 - JavaScript puro: *reveal on scroll* (IntersectionObserver) e botão de **copiar e‑mail**
-- Mockups (moldura de browser + celulares) desenhados 100% em **CSS/SVG**
+- Mockups (moldura de browser, celulares e as ilustrações dos projetos pessoais) desenhados em **CSS/SVG**, sem imagens
 - Acessibilidade: foco por teclado visível, `prefers-reduced-motion` respeitado
 - Hospedagem: **GitHub Pages**
 
@@ -37,7 +41,9 @@ python -m http.server 8000   # http://localhost:8000
 
 ## Atualizar
 
-Edite o `index.html` e faça commit na branch `main` — o GitHub Pages republica automaticamente em segundos.
+O GitHub Pages publica o que está na branch `main`. Por isso as mudanças entram por uma branch e um Pull Request: o merge na `main` é o que publica.
+
+A versão publicada até novembro de 2026 está marcada com a tag `v2026-07`.
 
 ## Contato
 
