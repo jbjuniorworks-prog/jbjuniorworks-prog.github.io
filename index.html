@@ -364,6 +364,50 @@
   .st ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 7px; }
   .st li { font-size: .85rem; padding: 5px 10px; border-radius: 7px; background: var(--surface-2); color: var(--ink); border: 1px solid var(--line-soft); }
 
+  /* ---------- personal projects ---------- */
+  .pj-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 40px; align-items: stretch; }
+  @media (max-width: 960px) { .pj-grid { grid-template-columns: 1fr; max-width: 640px; } }
+  .pj { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; display: flex; flex-direction: column; transition: border-color .18s ease; }
+  .pj:hover { border-color: var(--pine); }
+  .pj-vis { height: 136px; position: relative; overflow: hidden; border-bottom: 1px solid var(--line-soft);
+    background-color: color-mix(in srgb, var(--surface-2) 55%, var(--surface));
+    background-image: linear-gradient(var(--line-soft) 1px, transparent 1px), linear-gradient(90deg, var(--line-soft) 1px, transparent 1px);
+    background-size: 22px 22px; }
+  .pj-body { padding: 22px 22px 24px; display: flex; flex-direction: column; gap: 14px; flex: 1; }
+  .pj-body .pj-k { font-size: .7rem; font-weight: 650; letter-spacing: .1em; text-transform: uppercase; color: var(--pine); margin: 0; }
+  .pj h3 { margin: -6px 0 0; font-size: 1.4rem; letter-spacing: -.02em; }
+  .pj-body > p { margin: 0; color: var(--ink-soft); font-size: .94rem; }
+  .pj-pts { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+  .pj-pts li { position: relative; padding-left: 18px; font-size: .9rem; line-height: 1.5; }
+  .pj-pts li::before { content: ""; position: absolute; left: 2px; top: .62em; width: 7px; height: 7px; border-radius: 2px; background: var(--pine); }
+  .pj-pts li span { color: var(--ink-soft); }
+  .pj-foot { margin-top: auto; display: flex; flex-direction: column; gap: 14px; padding-top: 4px; }
+  .pj-note { margin: 0; font-size: .82rem; color: var(--ink-faint); }
+  .pj-foot .btn { align-self: flex-start; }
+  .pj-priv { align-self: flex-start; font-size: .82rem; font-weight: 600; color: var(--ink-faint); border: 1px dashed var(--line); border-radius: 9px; padding: 10px 16px; }
+
+  /* brasa: kanban */
+  .kb { position: absolute; inset: 18px 18px 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .kb-col { background: var(--surface); border: 1px solid var(--line-soft); border-bottom: none; border-radius: 10px 10px 0 0; padding: 8px; display: flex; flex-direction: column; gap: 6px; }
+  .kb-h { font-size: .6rem; font-weight: 650; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-faint); }
+  .kb-c { display: block; height: 20px; border-radius: 6px; background: var(--surface-2); border: 1px solid var(--line-soft); }
+  .kb-c.hot { background: var(--signal-wash); border-color: color-mix(in srgb, var(--signal) 45%, transparent); }
+  .kb-c.ok { background: var(--moss-wash); border-color: color-mix(in srgb, var(--pine) 40%, transparent); }
+
+  /* rota: map */
+  .pj-vis svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .stop circle { fill: var(--surface); stroke: var(--pine); stroke-width: 2.5; }
+  .stop text { fill: var(--ink); font: 700 10px var(--font-sans); }
+
+  /* martelo: bid panel */
+  .bid { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: min(264px, calc(100% - 36px)); background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; display: flex; flex-direction: column; gap: 6px; box-shadow: var(--shadow); }
+  .bid-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+  .bid-l { font-size: .62rem; font-weight: 650; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-faint); }
+  .bid-v { font-size: 1.5rem; font-weight: 780; letter-spacing: -.02em; font-variant-numeric: tabular-nums; line-height: 1.1; }
+  .bid-v small { font-size: .9rem; color: var(--ink-soft); font-weight: 600; }
+  .bid-t { font-size: .76rem; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+  .bid-t b { color: var(--signal); }
+
   /* ---------- process ---------- */
   .proc-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--line-soft); border: 1px solid var(--line-soft); border-radius: var(--radius); overflow: hidden; margin-top: 40px; }
   @media (max-width: 720px) { .proc-grid { grid-template-columns: 1fr; } }
@@ -395,6 +439,7 @@
     <nav class="nav">
       <a href="#licenciamento">licenciamento</a>
       <a href="#marketplace">marketplace</a>
+      <a href="#pessoais">pessoais</a>
       <a href="#stack">stack</a>
       <a href="#processo">processo</a>
       <a href="#contato">contato</a>
@@ -413,7 +458,9 @@
         Dois produtos recentes: uma <b>plataforma SaaS de licenciamento ambiental</b> para prefeituras —
         com IA em produção e uma auditoria de segurança do repositório inteiro — e um
         <b>marketplace local em React Native</b>, com três apps mobile, entrega em tempo real e
-        assistente de compras com IA.
+        assistente de compras com IA. Fora do trabalho, construo produtos próprios: um
+        <b>delivery multi-loja</b>, um <b>roteirizador</b> que entregadores usam no dia a dia e uma
+        <b>casa de leilões com lances ao vivo</b>.
       </p>
       <div class="cta-row">
         <a class="btn primary" href="#licenciamento">
@@ -704,6 +751,126 @@
           <h4>Assistente que age</h4>
           <p>Um agente de compras com <em>tool-calling</em> busca produtos e monta pedidos, ancorado no contexto gerado das specs para não alucinar chamadas de API.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJETOS PESSOAIS -->
+  <section id="pessoais">
+    <div class="wrap">
+      <p class="eyebrow">Projetos pessoais</p>
+      <h2 class="sec">Produtos inteiros, fora do expediente</h2>
+      <p class="sec-lead">
+        Projetos em que cuido de tudo: banco de dados, API, telas, testes e publicação.
+        Cada um resolve um problema concreto de quem usa.
+      </p>
+
+      <div class="pj-grid">
+        <!-- BRASA -->
+        <article class="pj reveal">
+          <div class="pj-vis" aria-hidden="true">
+            <div class="kb">
+              <div class="kb-col"><span class="kb-h">novo</span><i class="kb-c hot"></i><i class="kb-c"></i></div>
+              <div class="kb-col"><span class="kb-h">preparo</span><i class="kb-c"></i><i class="kb-c"></i><i class="kb-c"></i></div>
+              <div class="kb-col"><span class="kb-h">a caminho</span><i class="kb-c ok"></i></div>
+            </div>
+          </div>
+          <div class="pj-body">
+            <p class="pj-k">Delivery · multi-loja</p>
+            <h3>Brasa</h3>
+            <p>
+              Plataforma de delivery em três apps num só monorepo: o do cliente (cardápio, carrinho e
+              checkout), o painel do operador (pedidos em kanban, motoboys, caixa e dashboard) e um
+              PWA para o motoboy (corridas e mapa).
+            </p>
+            <ul class="pj-pts">
+              <li>Um só cardápio publicado atende várias lojas. <span>Cada uma tem endereço próprio e edita no painel nome, logo, cor, horários e formas de pagamento.</span></li>
+              <li>Pedidos em tempo real. <span>O painel recebe na hora os pedidos da própria loja, e o app do motoboy, as corridas dele.</span></li>
+              <li>Base compartilhada. <span>Tema, componentes, mapa e acesso a dados ficam em pacotes usados pelos três apps.</span></li>
+            </ul>
+            <div class="tagset">
+              <span class="chip">React</span><span class="chip">Vite</span><span class="chip">Tailwind</span>
+              <span class="chip">Supabase</span><span class="chip">Postgres</span><span class="chip">Leaflet</span>
+            </div>
+            <div class="pj-foot">
+              <span class="pj-priv">Código privado</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ROTA DE ENTREGAS -->
+        <article class="pj reveal">
+          <div class="pj-vis" aria-hidden="true">
+            <svg viewBox="0 0 320 136" preserveAspectRatio="xMidYMid meet" fill="none">
+              <path d="M28 108 H 92 V 60 H 170 V 98 H 236 V 36 H 292" style="stroke:var(--pine)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="28" cy="108" r="5" style="fill:var(--pine)"/>
+              <g class="stop"><circle cx="92" cy="84" r="10"/><text x="92" y="84" text-anchor="middle" dominant-baseline="central">1</text></g>
+              <g class="stop"><circle cx="170" cy="79" r="10"/><text x="170" y="79" text-anchor="middle" dominant-baseline="central">2</text></g>
+              <g class="stop"><circle cx="236" cy="67" r="10"/><text x="236" y="67" text-anchor="middle" dominant-baseline="central">3</text></g>
+              <g class="stop"><circle cx="292" cy="36" r="10"/><text x="292" y="36" text-anchor="middle" dominant-baseline="central">4</text></g>
+            </svg>
+          </div>
+          <div class="pj-body">
+            <p class="pj-k">Logística · PWA</p>
+            <h3>Rota de Entregas</h3>
+            <p>
+              App que entregadores usam para ordenar as paradas do dia. Lê a planilha da rota, prints
+              ou PDF da lista e até a gravação de tela da lista do Mercado Livre, localiza cada endereço
+              e calcula a sequência mais curta pelas ruas, abrindo cada parada no Waze ou no Google Maps.
+            </p>
+            <ul class="pj-pts">
+              <li>Leitura de texto no próprio celular. <span>O OCR (Tesseract) roda no aparelho e, depois de baixado, funciona sem sinal.</span></li>
+              <li>Endereços corrigidos em equipe. <span>A correção de um motorista vira sugestão para os outros; com dois no mesmo ponto, vale para todos.</span></li>
+              <li>Publicação protegida por testes. <span>Cada push roda os testes no GitHub Actions, inclusive os de tela no tamanho de celular, e só publica se passarem.</span></li>
+            </ul>
+            <div class="tagset">
+              <span class="chip">React 19</span><span class="chip">TypeScript</span><span class="chip">Supabase</span>
+              <span class="chip">Leaflet</span><span class="chip">Tesseract</span><span class="chip">Playwright</span>
+            </div>
+            <div class="pj-foot">
+              <a class="btn" href="https://github.com/jbjuniorworks-prog/rota-entregas" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3-.3 6.2-1.5 6.2-6.7A5.2 5.2 0 0 0 20 5a4.9 4.9 0 0 0-.1-3.6s-1.2-.4-4 1.5a13.4 13.4 0 0 0-7 0C6.1 1 4.9 1.4 4.9 1.4A4.9 4.9 0 0 0 4.8 5 5.2 5.2 0 0 0 3.5 8.6c0 5.2 3.2 6.4 6.2 6.7a3.4 3.4 0 0 0-.9 2.6V22"/></svg>
+                Ver o código
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- MARTELO -->
+        <article class="pj reveal">
+          <div class="pj-vis" aria-hidden="true">
+            <div class="bid">
+              <div class="bid-row"><span class="bid-l">Lance atual</span><span class="pill ok">você está ganhando</span></div>
+              <div class="bid-v">R$ 1.250<small>,00</small></div>
+              <div class="bid-row"><span class="bid-t">Encerra em <b>01:42</b></span><span class="bid-t">7 lances</span></div>
+            </div>
+          </div>
+          <div class="pj-body">
+            <p class="pj-k">Leilão online · tempo real</p>
+            <h3>Martelo</h3>
+            <p>
+              Casa de leilões de cartas colecionáveis, feita para um teste técnico. O leiloeiro monta
+              lotes a partir de uma API pública, os licitantes disputam com lances ao vivo e quem vence
+              recebe um comprovante assinado.
+            </p>
+            <ul class="pj-pts">
+              <li>Lances ao vivo com saldo comprometido. <span>Lance aceito nos últimos 2 minutos prorroga o lote (anti-sniping).</span></li>
+              <li>Auditoria pública, sem login. <span>Uma cadeia de hashes assinada detecta lances alterados direto no banco; o README documenta o que ela não cobre.</span></li>
+              <li>Testes de integração contra Postgres real. <span>Inclusive lances simultâneos e adulteração do histórico.</span></li>
+            </ul>
+            <div class="tagset">
+              <span class="chip">React 19</span><span class="chip">TypeScript</span><span class="chip">Express 5</span>
+              <span class="chip">Prisma</span><span class="chip">Postgres</span><span class="chip">Socket.IO</span>
+            </div>
+            <div class="pj-foot">
+              <p class="pj-note">Feito com uso intenso de IA. O repositório documenta o que foi da IA e o que foi meu.</p>
+              <a class="btn" href="https://github.com/jbjuniorworks-prog/verzel-leiloes" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3-.3 6.2-1.5 6.2-6.7A5.2 5.2 0 0 0 20 5a4.9 4.9 0 0 0-.1-3.6s-1.2-.4-4 1.5a13.4 13.4 0 0 0-7 0C6.1 1 4.9 1.4 4.9 1.4A4.9 4.9 0 0 0 4.8 5 5.2 5.2 0 0 0 3.5 8.6c0 5.2 3.2 6.4 6.2 6.7a3.4 3.4 0 0 0-.9 2.6V22"/></svg>
+                Ver o código
+              </a>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
   </section>
