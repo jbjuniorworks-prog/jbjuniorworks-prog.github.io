@@ -428,6 +428,15 @@
   .proc h3 { margin: 8px 0 8px; font-size: 1.08rem; letter-spacing: -.01em; }
   .proc p { margin: 0; color: var(--ink-soft); font-size: .95rem; }
 
+  /* ---------- career ---------- */
+  .tl { margin-top: 40px; border: 1px solid var(--line-soft); border-radius: var(--radius); background: var(--surface); overflow: hidden; }
+  .tl-item { display: grid; grid-template-columns: 180px 1fr; gap: 20px; padding: 22px 26px; border-top: 1px solid var(--line-soft); }
+  .tl-item:first-child { border-top: none; }
+  .tl-when { font-size: .74rem; font-weight: 650; letter-spacing: .08em; text-transform: uppercase; color: var(--pine); padding-top: 4px; }
+  .tl-item h3 { margin: 0; font-size: 1.08rem; letter-spacing: -.01em; }
+  .tl-item p { margin: 6px 0 0; color: var(--ink-soft); font-size: .95rem; }
+  @media (max-width: 600px) { .tl-item { grid-template-columns: 1fr; gap: 6px; padding: 20px; } }
+
   /* ---------- contact ---------- */
   .contact h2.sec { max-width: 24ch; }
   .contact-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
@@ -999,6 +1008,35 @@
         <div class="proc reveal"><div class="no">spec-driven</div>
           <h3>Da especificação ao código</h3>
           <p>Em features médias/grandes, saio do spec para o plano e para as tasks (Spec Kit) — o "porquê" fica versionado no repo.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAJETÓRIA -->
+  <section id="trajetoria">
+    <div class="wrap">
+      <p class="eyebrow">Trajetória</p>
+      <h2 class="sec">Experiência e formação</h2>
+      <div class="tl reveal">
+        <div class="tl-item">
+          <span class="tl-when">set/2025 · hoje</span>
+          <div>
+            <h3>Desenvolvedor Full-Stack Júnior · AjuLabs</h3>
+            <p>Backend em Python/FastAPI e telas em Next.js na plataforma de licenciamento; backend e apps mobile do marketplace.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <span class="tl-when">em andamento</span>
+          <div>
+            <h3>Tecnólogo em Análise e Desenvolvimento de Sistemas · Anhanguera</h3>
+          </div>
+        </div>
+        <div class="tl-item">
+          <span class="tl-when">idiomas</span>
+          <div>
+            <h3>Português nativo · inglês avançado</h3>
+          </div>
+        </div>
       </div>
     </div>
   </section>
