@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
   <title>Portfólio · José Batista — Full-stack Dev</title>
-  <meta name="description" content="Portfólio de José Batista, desenvolvedor full-stack (Python + TypeScript). Plataforma SaaS de licenciamento ambiental e marketplace local com entrega em tempo real.">
+  <meta name="description" content="Portfólio de José Batista, desenvolvedor full-stack (Python + TypeScript). Plataforma SaaS de licenciamento ambiental, marketplace com entrega em tempo real, projetos pessoais e freelas.">
   <meta name="author" content="José Batista">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#1b6b4a">
@@ -15,7 +15,7 @@
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="José Batista — Full-stack Dev">
   <meta property="og:title" content="José Batista — Desenvolvedor Full-stack">
-  <meta property="og:description" content="Full-stack (Python + TypeScript): plataforma SaaS de licenciamento ambiental e marketplace local com entrega em tempo real.">
+  <meta property="og:description" content="Full-stack (Python + TypeScript): SaaS de licenciamento ambiental, marketplace em tempo real, projetos pessoais e freelas.">
   <meta property="og:url" content="https://jbjuniorworks-prog.github.io/">
   <meta property="og:image" content="https://jbjuniorworks-prog.github.io/preview.png">
   <meta property="og:image:width" content="1200">
@@ -23,9 +23,9 @@
   <meta property="og:image:alt" content="José Batista — Desenvolvedor Full-stack. Licenciamento SaaS, marketplace mobile, IA em produção.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="José Batista — Desenvolvedor Full-stack">
-  <meta name="twitter:description" content="Full-stack (Python + TypeScript): plataforma SaaS de licenciamento ambiental e marketplace local com entrega em tempo real.">
+  <meta name="twitter:description" content="Full-stack (Python + TypeScript): SaaS de licenciamento ambiental, marketplace em tempo real, projetos pessoais e freelas.">
   <meta name="twitter:image" content="https://jbjuniorworks-prog.github.io/preview.png">
-  <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">🌲</text></svg>'>
+  <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="%231b6b4a"/><text x="32" y="42" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="700" fill="%23f5faf6">JB</text></svg>'>
 <style>
   :root {
     --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -42,6 +42,7 @@
     --pine: #1b6b4a;
     --pine-deep: #124d35;
     --moss-wash: #dbe8de;
+    --on-pine: #f5faf6;
     --signal: #a94e1c;
     --signal-wash: #efe0d3;
 
@@ -70,6 +71,7 @@
       --pine: #49b380;
       --pine-deep: #2f9061;
       --moss-wash: #16281f;
+      --on-pine: #0b1512;
       --signal: #e08a54;
       --signal-wash: #26190f;
 
@@ -86,7 +88,7 @@
     --paper: #edf1ec; --surface: #f7f9f5; --surface-2: #e5eae1;
     --ink: #12211b; --ink-soft: #4a584f; --ink-faint: #75847a;
     --line: #cad5c8; --line-soft: #dbe3d8;
-    --pine: #1b6b4a; --pine-deep: #124d35; --moss-wash: #dbe8de;
+    --pine: #1b6b4a; --pine-deep: #124d35; --moss-wash: #dbe8de; --on-pine: #f5faf6;
     --signal: #a94e1c; --signal-wash: #efe0d3;
     --crit: #b23a2e; --crit-wash: #f0dcd8; --grave: #9e6a12; --grave-wash: #efe4cf; --med: #4f6577; --med-wash: #dde5ea;
     --shadow: 0 1px 2px rgba(18,33,27,.05), 0 8px 30px -18px rgba(18,33,27,.22);
@@ -95,7 +97,7 @@
     --paper: #0b1512; --surface: #12201a; --surface-2: #182a21;
     --ink: #e3ebe3; --ink-soft: #9bae9f; --ink-faint: #6f8377;
     --line: #26362d; --line-soft: #1e2c25;
-    --pine: #49b380; --pine-deep: #2f9061; --moss-wash: #16281f;
+    --pine: #49b380; --pine-deep: #2f9061; --moss-wash: #16281f; --on-pine: #0b1512;
     --signal: #e08a54; --signal-wash: #26190f;
     --crit: #e5705f; --crit-wash: #291714; --grave: #dfa63c; --grave-wash: #241c0f; --med: #8fa5b5; --med-wash: #131f27;
     --shadow: 0 1px 2px rgba(0,0,0,.3), 0 12px 40px -20px rgba(0,0,0,.7);
@@ -129,12 +131,11 @@
     border-bottom: 1px solid var(--line-soft);
   }
   .top-in { display: flex; align-items: center; justify-content: space-between; height: 60px; }
-  .brand { font-family: var(--font-mono); font-weight: 600; font-size: .9rem; letter-spacing: .02em; }
-  .brand b { color: var(--pine); }
+  .brand { font-weight: 700; font-size: 1rem; letter-spacing: -.01em; }
   .nav { display: flex; gap: 24px; }
   .nav a {
-    font-family: var(--font-mono); font-size: .78rem; text-decoration: none;
-    color: var(--ink-soft); letter-spacing: .03em; padding: 4px 0; position: relative;
+    font-size: .86rem; text-decoration: none;
+    color: var(--ink-soft); padding: 4px 0; position: relative;
   }
   .nav a::after {
     content: ""; position: absolute; left: 0; right: 100%; bottom: -2px; height: 1.5px;
@@ -146,7 +147,7 @@
 
   /* ---------- eyebrow / section headings ---------- */
   .eyebrow {
-    font-family: var(--font-mono); font-size: .74rem; letter-spacing: .18em;
+    font-size: .74rem; font-weight: 650; letter-spacing: .14em;
     text-transform: uppercase; color: var(--pine);
     display: inline-flex; align-items: center; gap: 9px; margin: 0 0 18px;
   }
@@ -159,7 +160,7 @@
     letter-spacing: -.02em; font-weight: 780; text-wrap: balance; max-width: 22ch;
   }
   .sec-lead { color: var(--ink-soft); max-width: 62ch; font-size: 1.06rem; margin: 0; }
-  .subhead { font-family: var(--font-mono); font-size: .74rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint); margin: 56px 0 4px; display: flex; align-items: center; gap: 10px; }
+  .subhead { font-size: .74rem; font-weight: 650; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint); margin: 56px 0 4px; display: flex; align-items: center; gap: 10px; }
   .subhead::before { content: ""; width: 16px; height: 1.5px; background: var(--ink-faint); }
 
   /* ---------- hero ---------- */
@@ -176,8 +177,8 @@
   }
   .hero .wrap { position: relative; z-index: 1; }
   .hero-tag {
-    font-family: var(--font-mono); font-size: .78rem; color: var(--ink-soft);
-    letter-spacing: .06em; display: flex; align-items: center; gap: 10px; margin-bottom: 26px;
+    font-size: .92rem; font-weight: 600; color: var(--ink-soft);
+    display: flex; align-items: center; gap: 10px; margin-bottom: 26px;
   }
   .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--pine); box-shadow: 0 0 0 4px var(--moss-wash); }
   h1 {
@@ -190,13 +191,13 @@
 
   .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 54px; }
   .btn {
-    display: inline-flex; align-items: center; gap: 9px; font-family: var(--font-mono);
-    font-size: .84rem; letter-spacing: .02em; text-decoration: none; padding: 11px 18px;
+    display: inline-flex; align-items: center; gap: 9px; font-family: inherit;
+    font-size: .92rem; font-weight: 600; text-decoration: none; padding: 11px 18px;
     border-radius: 9px; border: 1px solid var(--line); background: var(--surface); color: var(--ink);
     transition: transform .18s ease, border-color .18s ease, background .18s ease;
   }
   .btn:hover { transform: translateY(-2px); border-color: var(--pine); }
-  .btn.primary { background: var(--pine); border-color: var(--pine); color: #f5faf6; }
+  .btn.primary { background: var(--pine); border-color: var(--pine); color: var(--on-pine); }
   .btn.primary:hover { background: var(--pine-deep); border-color: var(--pine-deep); }
   .btn svg { width: 15px; height: 15px; }
   button.btn { cursor: pointer; -webkit-appearance: none; appearance: none; }
@@ -209,7 +210,7 @@
   .metric { background: var(--surface); padding: 22px 20px; }
   .metric .n { font-size: clamp(1.4rem, 3.4vw, 2rem); font-weight: 780; letter-spacing: -.02em; font-variant-numeric: tabular-nums; line-height: 1; }
   .metric .n .u { color: var(--pine); }
-  .metric .l { font-family: var(--font-mono); font-size: .72rem; color: var(--ink-soft); margin-top: 10px; line-height: 1.4; letter-spacing: .01em; }
+  .metric .l { font-size: .82rem; color: var(--ink-soft); margin-top: 10px; line-height: 1.4; }
   @media (max-width: 720px) { .metrics { grid-template-columns: repeat(2, 1fr); } }
 
   /* ---------- project intro ---------- */
@@ -218,14 +219,14 @@
   .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; box-shadow: var(--shadow); }
   .card p { color: var(--ink-soft); }
   .kv { display: grid; grid-template-columns: auto 1fr; gap: 10px 18px; font-size: .92rem; margin: 0; }
-  .kv dt { font-family: var(--font-mono); font-size: .74rem; letter-spacing: .04em; color: var(--ink-faint); text-transform: uppercase; padding-top: 3px; }
+  .kv dt { font-size: .74rem; font-weight: 650; letter-spacing: .06em; color: var(--ink-faint); text-transform: uppercase; padding-top: 3px; }
   .kv dd { margin: 0; color: var(--ink); }
   .tagset { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 4px; }
   .chip { font-family: var(--font-mono); font-size: .72rem; padding: 4px 9px; border-radius: 6px; background: var(--moss-wash); color: var(--pine-deep); border: 1px solid color-mix(in srgb, var(--pine) 22%, transparent); }
 
   /* ---------- mockups (shared) ---------- */
   .figure { margin-top: 42px; }
-  .fig-cap { font-family: var(--font-mono); font-size: .72rem; color: var(--ink-faint); letter-spacing: .02em; margin: 16px 0 0; text-align: center; }
+  .fig-cap { font-size: .82rem; color: var(--ink-faint); margin: 16px 0 0; text-align: center; }
   .pill { font-family: var(--font-mono); font-size: .68rem; padding: 3px 10px; border-radius: 20px; border: 1px solid var(--line); white-space: nowrap; }
   .pill.ok { background: var(--moss-wash); color: var(--pine); border-color: color-mix(in srgb, var(--pine) 34%, transparent); }
   .pill.warn { background: var(--grave-wash); color: var(--grave); border-color: color-mix(in srgb, var(--grave) 42%, var(--line)); }
@@ -302,6 +303,7 @@
   .p-input { display: flex; align-items: center; gap: 8px; padding: 10px 12px; border-top: 1px solid var(--line-soft); background: var(--surface); }
   .p-input span { flex: 1; font-size: .72rem; color: var(--ink-faint); background: var(--surface-2); border: 1px solid var(--line-soft); border-radius: 16px; padding: 7px 12px; }
   .p-input .send { width: 28px; height: 28px; border-radius: 50%; background: var(--pine); color: #f5faf6; display: grid; place-items: center; font-style: normal; font-size: .78rem; flex: 0 0 auto; }
+  .p-input .send svg { width: 14px; height: 14px; }
 
   /* ---------- architecture diagram ---------- */
   .arch-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; margin-top: 20px; align-items: center; }
@@ -339,7 +341,7 @@
   .sev-row { display: flex; flex-wrap: wrap; gap: 10px; }
   .sev { display: flex; align-items: baseline; gap: 9px; padding: 10px 14px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); }
   .sev .c { font-size: 1.35rem; font-weight: 780; font-variant-numeric: tabular-nums; line-height: 1; }
-  .sev .t { font-family: var(--font-mono); font-size: .72rem; letter-spacing: .02em; color: var(--ink-soft); }
+  .sev .t { font-size: .8rem; color: var(--ink-soft); }
   .sev.crit { border-color: var(--crit); background: var(--crit-wash); } .sev.crit .c { color: var(--crit); }
   .sev.grave { border-color: color-mix(in srgb, var(--grave) 60%, var(--line)); background: var(--grave-wash); } .sev.grave .c { color: var(--grave); }
   .sev.med { border-color: color-mix(in srgb, var(--med) 45%, var(--line)); background: var(--med-wash); } .sev.med .c { color: var(--med); }
@@ -349,7 +351,7 @@
   @media (max-width: 640px) { .howto { grid-template-columns: 1fr; } }
   .howto .h { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 20px 22px; transition: border-color .18s ease; }
   .howto .h:hover { border-color: var(--pine); }
-  .howto .k { font-family: var(--font-mono); font-size: .7rem; color: var(--pine); letter-spacing: .04em; }
+  .howto .k { font-size: .7rem; font-weight: 650; color: var(--pine); letter-spacing: .1em; text-transform: uppercase; }
   .howto .h h4 { margin: 8px 0 6px; font-size: 1rem; letter-spacing: -.01em; }
   .howto .h p { margin: 0; color: var(--ink-soft); font-size: .92rem; }
 
@@ -359,25 +361,90 @@
   @media (max-width: 560px) { .stack-grid { grid-template-columns: 1fr; } }
   .st { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; transition: transform .18s ease, border-color .18s ease; }
   .st:hover { transform: translateY(-3px); border-color: var(--pine); }
-  .st h3 { font-family: var(--font-mono); font-size: .78rem; letter-spacing: .06em; text-transform: uppercase; color: var(--pine); margin: 0 0 14px; display: flex; align-items: center; gap: 9px; }
+  .st h3 { font-size: .78rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--pine); margin: 0 0 14px; display: flex; align-items: center; gap: 9px; }
   .st h3 .idx { color: var(--ink-faint); }
   .st ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 7px; }
   .st li { font-size: .85rem; padding: 5px 10px; border-radius: 7px; background: var(--surface-2); color: var(--ink); border: 1px solid var(--line-soft); }
+
+  /* ---------- personal projects ---------- */
+  .pj-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 40px; align-items: stretch; }
+  @media (max-width: 960px) { .pj-grid { grid-template-columns: 1fr; max-width: 640px; } }
+  .pj { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; display: flex; flex-direction: column; transition: border-color .18s ease; }
+  .pj:hover { border-color: var(--pine); }
+  .pj-vis { height: 136px; position: relative; overflow: hidden; border-bottom: 1px solid var(--line-soft);
+    background-color: color-mix(in srgb, var(--surface-2) 55%, var(--surface));
+    background-image: linear-gradient(var(--line-soft) 1px, transparent 1px), linear-gradient(90deg, var(--line-soft) 1px, transparent 1px);
+    background-size: 22px 22px; }
+  .pj-body { padding: 22px 22px 24px; display: flex; flex-direction: column; gap: 14px; flex: 1; }
+  .pj-body .pj-k { font-size: .7rem; font-weight: 650; letter-spacing: .1em; text-transform: uppercase; color: var(--pine); margin: 0; }
+  .pj h3 { margin: -6px 0 0; font-size: 1.4rem; letter-spacing: -.02em; }
+  .pj-body > p { margin: 0; color: var(--ink-soft); font-size: .94rem; }
+  .pj-pts { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+  .pj-pts li { position: relative; padding-left: 18px; font-size: .9rem; line-height: 1.5; }
+  .pj-pts li::before { content: ""; position: absolute; left: 2px; top: .62em; width: 7px; height: 7px; border-radius: 2px; background: var(--pine); }
+  .pj-pts li span { color: var(--ink-soft); }
+  .pj-foot { margin-top: auto; display: flex; flex-direction: column; gap: 14px; padding-top: 4px; }
+  .pj-note { margin: 0; font-size: .82rem; color: var(--ink-faint); }
+  .pj-foot .btn { align-self: flex-start; }
+  .pj-priv { align-self: flex-start; font-size: .82rem; font-weight: 600; color: var(--ink-faint); border: 1px dashed var(--line); border-radius: 9px; padding: 10px 16px; }
+
+  /* brasa: kanban */
+  .kb { position: absolute; inset: 18px 18px 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .kb-col { background: var(--surface); border: 1px solid var(--line-soft); border-bottom: none; border-radius: 10px 10px 0 0; padding: 8px; display: flex; flex-direction: column; gap: 6px; }
+  .kb-h { font-size: .6rem; font-weight: 650; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-faint); }
+  .kb-c { display: block; height: 20px; border-radius: 6px; background: var(--surface-2); border: 1px solid var(--line-soft); }
+  .kb-c.hot { background: var(--signal-wash); border-color: color-mix(in srgb, var(--signal) 45%, transparent); }
+  .kb-c.ok { background: var(--moss-wash); border-color: color-mix(in srgb, var(--pine) 40%, transparent); }
+
+  /* rota: map */
+  .pj-vis svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .stop circle { fill: var(--surface); stroke: var(--pine); stroke-width: 2.5; }
+  .stop text { fill: var(--ink); font: 700 10px var(--font-sans); }
+
+  /* martelo: bid panel */
+  .bid { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: min(264px, calc(100% - 36px)); background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; display: flex; flex-direction: column; gap: 6px; box-shadow: var(--shadow); }
+  .bid-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+  .bid-l { font-size: .62rem; font-weight: 650; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-faint); }
+  .bid-v { font-size: 1.5rem; font-weight: 780; letter-spacing: -.02em; font-variant-numeric: tabular-nums; line-height: 1.1; }
+  .bid-v small { font-size: .9rem; color: var(--ink-soft); font-weight: 600; }
+  .bid-t { font-size: .76rem; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+  .bid-t b { color: var(--signal); }
+
+  /* ---------- freelance ---------- */
+  .howto.three { grid-template-columns: repeat(3, 1fr); margin-top: 40px; }
+  @media (max-width: 860px) { .howto.three { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px) { .howto.three { grid-template-columns: 1fr; } }
+  .steps { list-style: none; margin: 24px 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line-soft); border: 1px solid var(--line-soft); border-radius: var(--radius); overflow: hidden; }
+  .steps li { background: var(--surface); padding: 20px 22px; display: flex; flex-direction: column; gap: 6px; }
+  .steps b { font-size: .7rem; font-weight: 650; letter-spacing: .1em; text-transform: uppercase; color: var(--pine); }
+  .steps span { color: var(--ink-soft); font-size: .92rem; }
+  @media (max-width: 860px) { .steps { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 520px) { .steps { grid-template-columns: 1fr; } }
+  .free-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
 
   /* ---------- process ---------- */
   .proc-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--line-soft); border: 1px solid var(--line-soft); border-radius: var(--radius); overflow: hidden; margin-top: 40px; }
   @media (max-width: 720px) { .proc-grid { grid-template-columns: 1fr; } }
   .proc { background: var(--surface); padding: 26px; }
-  .proc .no { font-family: var(--font-mono); font-size: .74rem; color: var(--pine); letter-spacing: .06em; }
+  .proc .no { font-size: .7rem; font-weight: 650; color: var(--pine); letter-spacing: .1em; text-transform: uppercase; }
   .proc h3 { margin: 8px 0 8px; font-size: 1.08rem; letter-spacing: -.01em; }
   .proc p { margin: 0; color: var(--ink-soft); font-size: .95rem; }
+
+  /* ---------- career ---------- */
+  .tl { margin-top: 40px; border: 1px solid var(--line-soft); border-radius: var(--radius); background: var(--surface); overflow: hidden; }
+  .tl-item { display: grid; grid-template-columns: 180px 1fr; gap: 20px; padding: 22px 26px; border-top: 1px solid var(--line-soft); }
+  .tl-item:first-child { border-top: none; }
+  .tl-when { font-size: .74rem; font-weight: 650; letter-spacing: .08em; text-transform: uppercase; color: var(--pine); padding-top: 4px; }
+  .tl-item h3 { margin: 0; font-size: 1.08rem; letter-spacing: -.01em; }
+  .tl-item p { margin: 6px 0 0; color: var(--ink-soft); font-size: .95rem; }
+  @media (max-width: 600px) { .tl-item { grid-template-columns: 1fr; gap: 6px; padding: 20px; } }
 
   /* ---------- contact ---------- */
   .contact h2.sec { max-width: 24ch; }
   .contact-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
 
   footer { border-top: 1px solid var(--line-soft); padding: 30px 0 46px; }
-  .foot-in { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-family: var(--font-mono); font-size: .74rem; color: var(--ink-faint); }
+  .foot-in { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: .84rem; color: var(--ink-faint); }
 
   /* reveal */
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s cubic-bezier(.2,.6,.2,1), transform .7s cubic-bezier(.2,.6,.2,1); }
@@ -391,10 +458,12 @@
 
 <header class="top">
   <div class="wrap top-in">
-    <span class="brand">jose<b>.batista</b></span>
+    <span class="brand">José Batista</span>
     <nav class="nav">
       <a href="#licenciamento">licenciamento</a>
       <a href="#marketplace">marketplace</a>
+      <a href="#pessoais">pessoais</a>
+      <a href="#freelas">freelas</a>
       <a href="#stack">stack</a>
       <a href="#processo">processo</a>
       <a href="#contato">contato</a>
@@ -413,13 +482,16 @@
         Dois produtos recentes: uma <b>plataforma SaaS de licenciamento ambiental</b> para prefeituras —
         com IA em produção e uma auditoria de segurança do repositório inteiro — e um
         <b>marketplace local em React Native</b>, com três apps mobile, entrega em tempo real e
-        assistente de compras com IA.
+        assistente de compras com IA. Fora do trabalho, construo produtos próprios: um
+        <b>delivery multi-loja</b>, um <b>roteirizador</b> que entregadores usam no dia a dia e uma
+        <b>casa de leilões com lances ao vivo</b>. Também atendo <b>projetos freelance</b>.
       </p>
       <div class="cta-row">
         <a class="btn primary" href="#licenciamento">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           Ver os projetos
         </a>
+        <a class="btn" href="#freelas">Contratar para um projeto</a>
         <button type="button" class="btn copy-email" data-email="jb.juniorworks@gmail.com" title="Copiar e-mail" aria-label="Copiar e-mail jb.juniorworks@gmail.com">
           <svg class="ic-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
           <svg class="ic-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
@@ -453,7 +525,7 @@
             (que confere e libera) e o <b>portal público do empreendedor</b> — e cada recurso é escopado por
             cidade, sem vazar dados entre municípios. Entreguei desde a modelagem do núcleo de licenciamento
             até o treinamento de IA de verdade, sempre no mesmo padrão: <b>slice vertical</b>
-            (domínio → dados → apresentação), migrations escritas à mão e verificação rodando de verdade
+            (domínio, dados e apresentação), migrations escritas à mão e verificação rodando de verdade
             antes de subir.
           </p>
         </div>
@@ -520,7 +592,7 @@
             </div>
           </div>
         </div>
-        <p class="fig-cap">Mockup · configuração de tipos de licença com o gating de IA (treino → conferência → no ar)</p>
+        <p class="fig-cap">Mockup · configuração de tipos de licença com o gating de IA: treino, conferência e publicação</p>
       </div>
 
       <!-- how it was made: architecture -->
@@ -551,7 +623,7 @@
           </div>
           <div class="lg-item">
             <span class="lg-k">data</span>
-            <p class="lg-v">Implementações concretas das portas. <span>Troco o adapter (mock → SQL, stub → OpenAI real) sem tocar no domínio.</span></p>
+            <p class="lg-v">Implementações concretas das portas. <span>Troco o adapter (de mock para SQL, de stub para OpenAI real) sem tocar no domínio.</span></p>
           </div>
           <div class="lg-item">
             <span class="lg-k">presentation</span>
@@ -650,7 +722,7 @@
               <div class="msg in">Pronto — quer que eu já monte a entrega?</div>
               <div class="msg typing"><i></i><i></i><i></i></div>
             </div>
-            <div class="p-input"><span>Pergunte à assistente…</span><i class="send">↑</i></div>
+            <div class="p-input"><span>Pergunte à assistente…</span><i class="send"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></i></div>
           </div></div>
         </div>
         <p class="fig-cap">Mockups · app do consumidor: vitrine, rastreamento de entrega e assistente de compras</p>
@@ -708,6 +780,186 @@
     </div>
   </section>
 
+  <!-- PROJETOS PESSOAIS -->
+  <section id="pessoais">
+    <div class="wrap">
+      <p class="eyebrow">Projetos pessoais</p>
+      <h2 class="sec">Produtos inteiros, fora do expediente</h2>
+      <p class="sec-lead">
+        Projetos em que cuido de tudo: banco de dados, API, telas, testes e publicação.
+        Cada um resolve um problema concreto de quem usa.
+      </p>
+
+      <div class="pj-grid">
+        <!-- BRASA -->
+        <article class="pj reveal">
+          <div class="pj-vis" aria-hidden="true">
+            <div class="kb">
+              <div class="kb-col"><span class="kb-h">novo</span><i class="kb-c hot"></i><i class="kb-c"></i></div>
+              <div class="kb-col"><span class="kb-h">preparo</span><i class="kb-c"></i><i class="kb-c"></i><i class="kb-c"></i></div>
+              <div class="kb-col"><span class="kb-h">a caminho</span><i class="kb-c ok"></i></div>
+            </div>
+          </div>
+          <div class="pj-body">
+            <p class="pj-k">Delivery · multi-loja</p>
+            <h3>Brasa</h3>
+            <p>
+              Plataforma de delivery em três apps num só monorepo: o do cliente (cardápio, carrinho e
+              checkout), o painel do operador (pedidos em kanban, motoboys, caixa e dashboard) e um
+              PWA para o motoboy (corridas e mapa).
+            </p>
+            <ul class="pj-pts">
+              <li>Um só cardápio publicado atende várias lojas. <span>Cada uma tem endereço próprio e edita no painel nome, logo, cor, horários e formas de pagamento.</span></li>
+              <li>Pedidos em tempo real. <span>O painel recebe na hora os pedidos da própria loja, e o app do motoboy, as corridas dele.</span></li>
+              <li>Base compartilhada. <span>Tema, componentes, mapa e acesso a dados ficam em pacotes usados pelos três apps.</span></li>
+            </ul>
+            <div class="tagset">
+              <span class="chip">React</span><span class="chip">Vite</span><span class="chip">Tailwind</span>
+              <span class="chip">Supabase</span><span class="chip">Postgres</span><span class="chip">Leaflet</span>
+            </div>
+            <div class="pj-foot">
+              <span class="pj-priv">Código privado</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ROTA DE ENTREGAS -->
+        <article class="pj reveal">
+          <div class="pj-vis" aria-hidden="true">
+            <svg viewBox="0 0 320 136" preserveAspectRatio="xMidYMid meet" fill="none">
+              <path d="M28 108 H 92 V 60 H 170 V 98 H 236 V 36 H 292" style="stroke:var(--pine)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="28" cy="108" r="5" style="fill:var(--pine)"/>
+              <g class="stop"><circle cx="92" cy="84" r="10"/><text x="92" y="84" text-anchor="middle" dominant-baseline="central">1</text></g>
+              <g class="stop"><circle cx="170" cy="79" r="10"/><text x="170" y="79" text-anchor="middle" dominant-baseline="central">2</text></g>
+              <g class="stop"><circle cx="236" cy="67" r="10"/><text x="236" y="67" text-anchor="middle" dominant-baseline="central">3</text></g>
+              <g class="stop"><circle cx="292" cy="36" r="10"/><text x="292" y="36" text-anchor="middle" dominant-baseline="central">4</text></g>
+            </svg>
+          </div>
+          <div class="pj-body">
+            <p class="pj-k">Logística · PWA</p>
+            <h3>Rota de Entregas</h3>
+            <p>
+              App que entregadores usam para ordenar as paradas do dia. Lê a planilha da rota, prints
+              ou PDF da lista e até a gravação de tela da lista do Mercado Livre, localiza cada endereço
+              e calcula a sequência mais curta pelas ruas, abrindo cada parada no Waze ou no Google Maps.
+            </p>
+            <ul class="pj-pts">
+              <li>Leitura de texto no próprio celular. <span>O OCR (Tesseract) roda no aparelho e, depois de baixado, funciona sem sinal.</span></li>
+              <li>Endereços corrigidos em equipe. <span>A correção de um motorista vira sugestão para os outros; com dois no mesmo ponto, vale para todos.</span></li>
+              <li>Publicação protegida por testes. <span>Cada push roda os testes no GitHub Actions, inclusive os de tela no tamanho de celular, e só publica se passarem.</span></li>
+            </ul>
+            <div class="tagset">
+              <span class="chip">React 19</span><span class="chip">TypeScript</span><span class="chip">Supabase</span>
+              <span class="chip">Leaflet</span><span class="chip">Tesseract</span><span class="chip">Playwright</span>
+            </div>
+            <div class="pj-foot">
+              <a class="btn" href="https://github.com/jbjuniorworks-prog/rota-entregas" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3-.3 6.2-1.5 6.2-6.7A5.2 5.2 0 0 0 20 5a4.9 4.9 0 0 0-.1-3.6s-1.2-.4-4 1.5a13.4 13.4 0 0 0-7 0C6.1 1 4.9 1.4 4.9 1.4A4.9 4.9 0 0 0 4.8 5 5.2 5.2 0 0 0 3.5 8.6c0 5.2 3.2 6.4 6.2 6.7a3.4 3.4 0 0 0-.9 2.6V22"/></svg>
+                Ver o código
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- MARTELO -->
+        <article class="pj reveal">
+          <div class="pj-vis" aria-hidden="true">
+            <div class="bid">
+              <div class="bid-row"><span class="bid-l">Lance atual</span><span class="pill ok">você está ganhando</span></div>
+              <div class="bid-v">R$ 1.250<small>,00</small></div>
+              <div class="bid-row"><span class="bid-t">Encerra em <b>01:42</b></span><span class="bid-t">7 lances</span></div>
+            </div>
+          </div>
+          <div class="pj-body">
+            <p class="pj-k">Leilão online · tempo real</p>
+            <h3>Martelo</h3>
+            <p>
+              Casa de leilões de cartas colecionáveis, feita para um teste técnico. O leiloeiro monta
+              lotes a partir de uma API pública, os licitantes disputam com lances ao vivo e quem vence
+              recebe um comprovante assinado.
+            </p>
+            <ul class="pj-pts">
+              <li>Lances ao vivo com saldo comprometido. <span>Lance aceito nos últimos 2 minutos prorroga o lote (anti-sniping).</span></li>
+              <li>Auditoria pública, sem login. <span>Uma cadeia de hashes assinada detecta lances alterados direto no banco; o README documenta o que ela não cobre.</span></li>
+              <li>Testes de integração contra Postgres real. <span>Inclusive lances simultâneos e adulteração do histórico.</span></li>
+            </ul>
+            <div class="tagset">
+              <span class="chip">React 19</span><span class="chip">TypeScript</span><span class="chip">Express 5</span>
+              <span class="chip">Prisma</span><span class="chip">Postgres</span><span class="chip">Socket.IO</span>
+            </div>
+            <div class="pj-foot">
+              <p class="pj-note">Feito com uso intenso de IA. O repositório documenta o que foi da IA e o que foi meu.</p>
+              <a class="btn" href="https://github.com/jbjuniorworks-prog/verzel-leiloes" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3-.3 6.2-1.5 6.2-6.7A5.2 5.2 0 0 0 20 5a4.9 4.9 0 0 0-.1-3.6s-1.2-.4-4 1.5a13.4 13.4 0 0 0-7 0C6.1 1 4.9 1.4 4.9 1.4A4.9 4.9 0 0 0 4.8 5 5.2 5.2 0 0 0 3.5 8.6c0 5.2 3.2 6.4 6.2 6.7a3.4 3.4 0 0 0-.9 2.6V22"/></svg>
+                Ver o código
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FREELAS -->
+  <section id="freelas">
+    <div class="wrap">
+      <p class="eyebrow">Freelas</p>
+      <h2 class="sec">Precisa de um site ou de um sistema?</h2>
+      <p class="sec-lead">
+        Também atendo projetos freelance, para negócios e pessoas que querem tirar uma ideia do papel
+        ou consertar o que já existe. Explico tudo sem tecniquês e você acompanha o andamento.
+      </p>
+
+      <div class="howto three">
+        <div class="h reveal">
+          <div class="k">Sites</div>
+          <h4>Sites e landing pages</h4>
+          <p>Páginas rápidas, com cara profissional, feitas para funcionar bem no celular.</p>
+        </div>
+        <div class="h reveal">
+          <div class="k">Sistemas</div>
+          <h4>Sistemas sob medida</h4>
+          <p>Painéis administrativos, cadastros, agendamentos, pedidos e estoque, do banco de dados à tela.</p>
+        </div>
+        <div class="h reveal">
+          <div class="k">Integrações</div>
+          <h4>APIs e integrações</h4>
+          <p>Conecto o seu sistema a outros serviços e automatizo o que hoje é feito à mão.</p>
+        </div>
+        <div class="h reveal">
+          <div class="k">IA</div>
+          <h4>Inteligência artificial no seu produto</h4>
+          <p>Assistentes e chatbots com a API da OpenAI, ligados aos dados do seu negócio.</p>
+        </div>
+        <div class="h reveal">
+          <div class="k">Celular</div>
+          <h4>Apps para celular</h4>
+          <p>Apps instaláveis (PWA) e apps em React Native, inclusive para quem trabalha na rua.</p>
+        </div>
+        <div class="h reveal">
+          <div class="k">Manutenção</div>
+          <h4>Correções e melhorias</h4>
+          <p>Bugs, lentidão e funcionalidades novas em projetos que já existem.</p>
+        </div>
+      </div>
+
+      <p class="subhead">Como funciona</p>
+      <ol class="steps reveal">
+        <li><b>1 · Conversa</b><span>Você conta o problema e eu digo com sinceridade se consigo ajudar.</span></li>
+        <li><b>2 · Proposta</b><span>Escopo, prazo e valor combinados por escrito antes de começar.</span></li>
+        <li><b>3 · Andamento</b><span>Você vê o projeto evoluindo durante o trabalho, não só no fim.</span></li>
+        <li><b>4 · Entrega</b><span>Código organizado e explicado, pronto para você usar e manter.</span></li>
+      </ol>
+
+      <div class="free-cta">
+        <a class="btn primary" href="#contato">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          Falar sobre um projeto
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- STACK -->
   <section id="stack">
     <div class="wrap">
@@ -719,15 +971,15 @@
         <div class="st reveal"><h3><span class="idx">01</span> Backend</h3>
           <ul><li>Python 3.14</li><li>FastAPI</li><li>Node · Express</li><li>SQLModel</li><li>Prisma</li><li>SQLAlchemy async</li><li>Postgres</li><li>Redis</li><li>Socket.IO</li><li>Alembic</li><li>Pydantic</li></ul></div>
         <div class="st reveal"><h3><span class="idx">02</span> Frontend &amp; Mobile</h3>
-          <ul><li>Next.js 16</li><li>React 19</li><li>React Native · Expo</li><li>TypeScript</li><li>Tailwind 4 · NativeWind</li><li>base-ui / shadcn</li><li>Zustand</li><li>TanStack Query</li><li>Recharts</li><li>React-Leaflet</li></ul></div>
+          <ul><li>Next.js 16</li><li>React 19</li><li>Vite</li><li>React Native · Expo</li><li>TypeScript</li><li>Tailwind 4 · NativeWind</li><li>base-ui / shadcn</li><li>Zustand</li><li>TanStack Query</li><li>Recharts</li><li>React-Leaflet</li></ul></div>
         <div class="st reveal"><h3><span class="idx">03</span> IA / LLM</h3>
           <ul><li>OpenAI · gpt-4o</li><li>LangChain</li><li>LangGraph</li><li>RAG de insumos</li><li>tool-calling</li><li>fallback determinístico</li></ul></div>
         <div class="st reveal"><h3><span class="idx">04</span> Arquitetura</h3>
           <ul><li>Clean Architecture</li><li>Ports &amp; adapters</li><li>Feature-Sliced Design</li><li>BFF</li><li>Multitenancy</li><li>RBAC · sessões · PAT</li></ul></div>
         <div class="st reveal"><h3><span class="idx">05</span> Infra &amp; fluxo</h3>
-          <ul><li>Docker</li><li>Railway</li><li>Supabase</li><li>GitHub Actions</li><li>Spec-Kit</li><li>uv · pnpm</li><li>Conventional Commits</li></ul></div>
+          <ul><li>Docker</li><li>Railway</li><li>Supabase</li><li>GitHub Actions</li><li>Playwright</li><li>Vitest</li><li>Spec-Kit</li><li>uv · pnpm</li><li>Conventional Commits</li></ul></div>
         <div class="st reveal"><h3><span class="idx">06</span> Domínios extras</h3>
-          <ul><li>PDF · WeasyPrint</li><li>Geo · Shapely</li><li>Shapefiles</li><li>pdfplumber</li></ul></div>
+          <ul><li>PDF · WeasyPrint</li><li>Geo · Shapely</li><li>Shapefiles</li><li>pdfplumber</li><li>OCR · Tesseract</li></ul></div>
       </div>
     </div>
   </section>
@@ -740,24 +992,53 @@
       <p class="sec-lead">Alguns hábitos que carrego pra qualquer time.</p>
 
       <div class="proc-grid">
-        <div class="proc reveal"><div class="no">// contrato primeiro</div>
+        <div class="proc reveal"><div class="no">contrato primeiro</div>
           <h3>Backend antes do front</h3>
           <p>Fecho e valido o contrato da API antes de desenhar a tela. Decisão que muda schema? Pergunto antes de codar.</p></div>
-        <div class="proc reveal"><div class="no">// verificação real</div>
+        <div class="proc reveal"><div class="no">verificação real</div>
           <h3>Nada de "deve funcionar"</h3>
           <p>Só considero pronto o que verifiquei rodando de verdade — subo a stack, exercito o caso e testo os cenários de falha.</p></div>
-        <div class="proc reveal"><div class="no">// migrations à mão</div>
+        <div class="proc reveal"><div class="no">migrations à mão</div>
           <h3>Migrations encadeadas, sem surpresa</h3>
           <p>Alembic escrito à mão e encadeado no head atual. Depois de sincronizar com a main, re-checo os heads antes de subir.</p></div>
-        <div class="proc reveal"><div class="no">// revisão</div>
+        <div class="proc reveal"><div class="no">revisão</div>
           <h3>Reviso o diff inteiro</h3>
           <p>Leio a mudança toda e passo um revisor independente antes de abrir o PR. Git em inglês, Conventional Commits.</p></div>
-        <div class="proc reveal"><div class="no">// da main atualizada</div>
+        <div class="proc reveal"><div class="no">da main atualizada</div>
           <h3>Sempre do código mais atual</h3>
           <p>O time faz merge contínuo. Começo e integro sempre da main sincronizada — começar desatualizado é retrabalho garantido.</p></div>
-        <div class="proc reveal"><div class="no">// spec-driven</div>
+        <div class="proc reveal"><div class="no">spec-driven</div>
           <h3>Da especificação ao código</h3>
           <p>Em features médias/grandes, saio do spec para o plano e para as tasks (Spec Kit) — o "porquê" fica versionado no repo.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAJETÓRIA -->
+  <section id="trajetoria">
+    <div class="wrap">
+      <p class="eyebrow">Trajetória</p>
+      <h2 class="sec">Experiência e formação</h2>
+      <div class="tl reveal">
+        <div class="tl-item">
+          <span class="tl-when">set/2025 · hoje</span>
+          <div>
+            <h3>Desenvolvedor Full-Stack Júnior · AjuLabs</h3>
+            <p>Backend em Python/FastAPI e telas em Next.js na plataforma de licenciamento; backend e apps mobile do marketplace.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <span class="tl-when">em andamento</span>
+          <div>
+            <h3>Tecnólogo em Análise e Desenvolvimento de Sistemas · Anhanguera</h3>
+          </div>
+        </div>
+        <div class="tl-item">
+          <span class="tl-when">idiomas</span>
+          <div>
+            <h3>Português nativo · inglês avançado</h3>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -767,7 +1048,7 @@
     <div class="wrap">
       <p class="eyebrow">Contato</p>
       <h2 class="sec">Vamos conversar sobre o próximo projeto?</h2>
-      <p class="sec-lead">Disponível para posições full-stack (Python + React/Next). Respondo rápido por e-mail.</p>
+      <p class="sec-lead">Disponível para vagas full-stack (Python + React/Next) e projetos freelance. Respondo rápido por e-mail.</p>
       <div class="contact-links">
         <button type="button" class="btn primary copy-email" data-email="jb.juniorworks@gmail.com" title="Copiar e-mail" aria-label="Copiar e-mail jb.juniorworks@gmail.com">
           <svg class="ic-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
@@ -790,7 +1071,7 @@
 <footer>
   <div class="wrap foot-in">
     <span>© 2026 · José Batista</span>
-    <span>construído como documento técnico — adapta ao tema claro/escuro</span>
+    <span>Aracaju, SE · Brasil</span>
   </div>
 </footer>
 
